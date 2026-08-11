@@ -31,7 +31,7 @@
     (is-alpha ?a - artifact)                    ; artifact a must be cooled and delivered to the cryo chamber
     (is-core-sample ?a - artifact)           ; artifact a is a martian core sample
 
-    (stabilized ?a - artifact)                  ; artifact a has, at some point, been secured in a pod (persists)
+    (stabilized ?a - artifact)                  ; artifact a has been secured in a pod
     (cooled ?a - artifact)                      ; artifact a has been cooled
   )
 
@@ -83,7 +83,6 @@
   )
 
   ;; ---- handling non-fragile artifacts directly -----
-  ;; check if there's no seismic activity
 
   (:action pickup-artifact
     :parameters (?r - robot ?a - artifact ?l - location)
@@ -98,7 +97,7 @@
   )
 
   ;; ---- handling fragile artifacts (must go inside a pod) ------
-  ;; The robot has to be carrying a pod, travel to the artifact and load it in pod.Check if there's no seismic activity
+  ;; The robot has to be carrying a pod, travel to the artifact and load it in pod.
 
   (:action secure-in-pod
     :parameters (?r - robot ?a - artifact ?p - pod ?l - location)
