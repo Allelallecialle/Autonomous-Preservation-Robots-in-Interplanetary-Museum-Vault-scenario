@@ -1,0 +1,383 @@
+;; ==========================================================================
+;; Domain: Interplanetary Museum Vault (IMV) - Problem 3
+;;
+;; HTN
+;; ==========================================================================
+
+(define (domain imv-transport-htn)
+
+  (:requirements :strips :typing :negative-preconditions :hierarchie :method-preconditions)
+
+  (:types
+    item - object
+    artifact pod - item
+    robot location slot - object
+  )
+
+  (:predicates
+    (at ?x - item ?l - location)
+    (robot-at ?r - robot ?l - location)
+
+    (slot-of ?s - slot ?r - robot)
+    (slot-free ?s - slot)
+    (holding ?s - slot ?x - item)
+
+    (in-pod ?a - artifact ?p - pod)
+
+    (tunnel-connected ?l1 - location ?l2 - location)
+    (tunnel-beta-connected ?l1 - location ?l2 - location)
+    (is-hall-beta ?l - location)
+
+    (sealed ?r - robot)
+    (seismic-active)
+
+    (can-fly ?r - robot)
+    (can-carry-pod ?r - robot)
+
+    (is-fragile ?a - artifact)
+    (is-alpha ?a - artifact)
+    (is-core-sample ?a - artifact)
+
+    (stabilized ?a - artifact)
+    (cooled ?a - artifact)
+  )
+
+  ;; ---- TASKS ---------------------------------
+
+  (:task t-mission
+    :parameters ()
+  )
+
+  (:task t-handle-artifact
+    :parameters (?a - artifact)
+  )
+
+  (:task t-transport-fragile
+    :parameters (?r - robot ?a - artifact ?dest - location)
+  )
+
+  (:task t-transport-plain
+    :parameters (?r - robot ?a - artifact ?dest - location)
+  )
+
+  (:task t-goto
+    :parameters (?r - robot ?to - location)
+  )
+
+
+  ;; ---- METHODS ---------------------------------
+  ;; high level methods for HTN problem:
+  ;; Handle the 5 artifacts
+
+  (:method m-mission
+    :parameters (?c - robot)
+    :task (t-mission)
+    :precondition (can-carry-pod ?c)
+    :subtasks (and
+      (task0 (activate-sealing ?c))
+      (task1 (t-handle-artifact art-beta-1))
+      (task2 (t-handle-artifact art-beta-2))
+      (task3 (t-handle-artifact art-alpha-1))
+      (task4 (t-handle-artifact art-alpha-2))
+      (task5 (t-handle-artifact core-sample-1))
+    )
+    :ordering (and
+      (task0 < task1)
+      (task1 < task2)
+      (task2 < task3)
+      (task3 < task4)
+      (task4 < task5)
+    )
+  )
+
+  ;; ---- METHODS ---------------------------------
+  ;; Each artifact handling depending on type
+
+  (:method m-handle-alpha-fragile
+    :parameters (?a - artifact ?r - robot)
+    :task (t-handle-artifact ?a)
+    :precondition (and (is-alpha ?a) (is-fragile ?a) (can-carry-pod ?r))
+    :subtasks (and
+      (task0 (t-transport-fragile ?r ?a cryo-chamber))
+    )
+  )
+
+  (:method m-handle-fragile-only
+    :parameters (?a - artifact ?r - robot)
+    :task (t-handle-artifact ?a)
+    :precondition (and (is-fragile ?a) (not (is-alpha ?a)) (can-carry-pod ?r))
+    :subtasks (and
+      (task0 (t-transport-fragile ?r ?a stasis-lab))
+    )
+  )
+
+  (:method m-handle-alpha-only
+    :parameters (?a - artifact ?r - robot)
+    :task (t-handle-artifact ?a)
+    :precondition (and (is-alpha ?a) (not (is-fragile ?a)))
+    :subtasks (and
+      (task0 (t-transport-plain ?r ?a cryo-chamber))
+    )
+  )
+
+  (:method m-handle-plain
+    :parameters (?a - artifact ?r - robot)
+    :task (t-handle-artifact ?a)
+    :precondition (and (not (is-fragile ?a)) (not (is-alpha ?a)))
+    :subtasks (and
+      (task0 (t-transport-plain ?r ?a stasis-lab))
+    )
+  )
+
+  ;; ---- METHODS ---------------------------------
+  ;; Transport types: pod based or direct, cooling
+
+  (:method m-transport-fragile-cool
+    :parameters (?r - robot ?a - artifact ?dest - location
+                 ?p - pod ?ploc - location ?aloc - location ?s - slot)
+    :task (t-transport-fragile ?r ?a ?dest)
+    :precondition (and (at ?p ?ploc) (at ?a ?aloc) (slot-of ?s ?r) (is-alpha ?a))
+    :subtasks (and
+      (task0 (t-goto ?r ?ploc))
+      (task1 (pickup-pod ?r ?p ?ploc ?s))
+      (task2 (t-goto ?r ?aloc))
+      (task3 (secure-in-pod ?r ?a ?p ?aloc ?s))
+      (task4 (cool-in-pod ?r ?a ?p ?s))
+      (task5 (t-goto ?r ?dest))
+      (task6 (unload-from-pod ?r ?a ?p ?dest ?s))
+    )
+    :ordering (and
+      (task0 < task1)
+      (task1 < task2)
+      (task2 < task3)
+      (task3 < task4)
+      (task4 < task5)
+      (task5 < task6)
+    )
+  )
+
+  (:method m-transport-fragile-plain
+    :parameters (?r - robot ?a - artifact ?dest - location
+                 ?p - pod ?ploc - location ?aloc - location ?s - slot)
+    :task (t-transport-fragile ?r ?a ?dest)
+    :precondition (and (at ?p ?ploc) (at ?a ?aloc) (slot-of ?s ?r) (not (is-alpha ?a)))
+    :subtasks (and
+      (task0 (t-goto ?r ?ploc))
+      (task1 (pickup-pod ?r ?p ?ploc ?s))
+      (task2 (t-goto ?r ?aloc))
+      (task3 (secure-in-pod ?r ?a ?p ?aloc ?s))
+      (task4 (t-goto ?r ?dest))
+      (task5 (unload-from-pod ?r ?a ?p ?dest ?s))
+    )
+    :ordering (and
+      (task0 < task1)
+      (task1 < task2)
+      (task2 < task3)
+      (task3 < task4)
+      (task4 < task5)
+    )
+  )
+
+  (:method m-transport-plain-cool
+    :parameters (?r - robot ?a - artifact ?dest - location ?aloc - location ?s - slot)
+    :task (t-transport-plain ?r ?a ?dest)
+    :precondition (and (at ?a ?aloc) (slot-of ?s ?r) (is-alpha ?a))
+    :subtasks (and
+      (task0 (t-goto ?r ?aloc))
+      (task1 (pickup-artifact ?r ?a ?aloc ?s))
+      (task2 (cool ?r ?a ?s))
+      (task3 (t-goto ?r ?dest))
+      (task4 (putdown-artifact ?r ?a ?dest ?s))
+    )
+    :ordering (and
+      (task0 < task1)
+      (task1 < task2)
+      (task2 < task3)
+      (task3 < task4)
+    )
+  )
+
+  (:method m-transport-plain-nocool
+    :parameters (?r - robot ?a - artifact ?dest - location ?aloc - location ?s - slot)
+    :task (t-transport-plain ?r ?a ?dest)
+    :precondition (and (at ?a ?aloc) (slot-of ?s ?r) (not (is-alpha ?a)))
+    :subtasks (and
+      (task0 (t-goto ?r ?aloc))
+      (task1 (pickup-artifact ?r ?a ?aloc ?s))
+      (task2 (t-goto ?r ?dest))
+      (task3 (putdown-artifact ?r ?a ?dest ?s))
+    )
+    :ordering (and
+      (task0 < task1)
+      (task1 < task2)
+      (task2 < task3)
+    )
+  )
+
+  ;; ---- METHODS ---------------------------------
+  ;; t-goto: is one tunnel hop/flight, bounded recursion because the map has radius 1 around the tunnel
+  ;; Check seismic when beta travel
+
+  (:method m-goto-arrived
+    :parameters (?r - robot ?to - location)
+    :task (t-goto ?r ?to)
+    :precondition (robot-at ?r ?to)
+    :subtasks ()
+  )
+
+  (:method m-goto-ground-step
+    :parameters (?r - robot ?from - location ?mid - location ?to - location)
+    :task (t-goto ?r ?to)
+    :precondition (and (robot-at ?r ?from) (tunnel-connected ?from ?mid) (not (can-fly ?r)))
+    :subtasks (and
+      (task0 (move-via-tunnel ?r ?from ?mid))
+      (task1 (t-goto ?r ?to))
+    )
+    :ordering (and
+      (task0 < task1)
+    )
+  )
+
+  (:method m-goto-ground-step-beta
+    :parameters (?r - robot ?from - location ?mid - location ?to - location)
+    :task (t-goto ?r ?to)
+    :precondition (and (robot-at ?r ?from) (tunnel-beta-connected ?from ?mid)
+                        (not (can-fly ?r)) (not (seismic-active)))
+    :subtasks (and
+      (task0 (move-via-tunnel-to-beta ?r ?from ?mid))
+      (task1 (t-goto ?r ?to))
+    )
+    :ordering (and
+      (task0 < task1)
+    )
+  )
+
+  (:method m-goto-fly
+    :parameters (?r - robot ?from - location ?to - location)
+    :task (t-goto ?r ?to)
+    :precondition (and (robot-at ?r ?from) (can-fly ?r)
+                        (not (is-hall-beta ?from)) (not (is-hall-beta ?to)))
+    :subtasks (and
+      (task0 (fly ?r ?from ?to))
+    )
+  )
+
+  (:method m-goto-fly-to-beta
+    :parameters (?r - robot ?from - location ?to - location)
+    :task (t-goto ?r ?to)
+    :precondition (and (robot-at ?r ?from) (can-fly ?r) (is-hall-beta ?to) (not (seismic-active)))
+    :subtasks (and
+      (task0 (fly-to-beta ?r ?from ?to))
+    )
+  )
+
+  (:method m-goto-fly-from-beta
+    :parameters (?r - robot ?from - location ?to - location)
+    :task (t-goto ?r ?to)
+    :precondition (and (robot-at ?r ?from) (can-fly ?r) (is-hall-beta ?from) (not (seismic-active)))
+    :subtasks (and
+      (task0 (fly-from-beta ?r ?from ?to))
+    )
+  )
+
+  ;; ---- PRIMITIVE ACTIONS ---------------------------------
+  ;; As in previous probelms
+
+  (:action move-via-tunnel
+    :parameters (?r - robot ?from - location ?to - location)
+    :precondition (and (robot-at ?r ?from) (tunnel-connected ?from ?to) (sealed ?r))
+    :effect (and (robot-at ?r ?to) (not (robot-at ?r ?from)))
+  )
+
+  (:action move-via-tunnel-to-beta
+    :parameters (?r - robot ?from - location ?to - location)
+    :precondition (and (robot-at ?r ?from) (tunnel-beta-connected ?from ?to)
+                        (sealed ?r) (not (seismic-active)))
+    :effect (and (robot-at ?r ?to) (not (robot-at ?r ?from)))
+  )
+
+  (:action activate-sealing
+    :parameters (?r - robot)
+    :precondition (not (sealed ?r))
+    :effect (sealed ?r)
+  )
+
+  (:action deactivate-sealing
+    :parameters (?r - robot)
+    :precondition (sealed ?r)
+    :effect (not (sealed ?r))
+  )
+
+  (:action fly
+    :parameters (?r - robot ?from - location ?to - location)
+    :precondition (and (robot-at ?r ?from) (can-fly ?r)
+                        (not (is-hall-beta ?from)) (not (is-hall-beta ?to)))
+    :effect (and (robot-at ?r ?to) (not (robot-at ?r ?from)))
+  )
+
+  (:action fly-to-beta
+    :parameters (?r - robot ?from - location ?to - location)
+    :precondition (and (robot-at ?r ?from) (can-fly ?r)
+                        (is-hall-beta ?to) (not (seismic-active)))
+    :effect (and (robot-at ?r ?to) (not (robot-at ?r ?from)))
+  )
+
+  (:action fly-from-beta
+    :parameters (?r - robot ?from - location ?to - location)
+    :precondition (and (robot-at ?r ?from) (can-fly ?r)
+                        (is-hall-beta ?from) (not (seismic-active)))
+    :effect (and (robot-at ?r ?to) (not (robot-at ?r ?from)))
+  )
+
+  (:action pickup-pod
+    :parameters (?r - robot ?p - pod ?l - location ?s - slot)
+    :precondition (and (robot-at ?r ?l) (at ?p ?l) (can-carry-pod ?r)
+                        (slot-of ?s ?r) (slot-free ?s))
+    :effect (and (holding ?s ?p) (not (at ?p ?l)) (not (slot-free ?s)))
+  )
+
+  (:action putdown-pod
+    :parameters (?r - robot ?p - pod ?l - location ?s - slot)
+    :precondition (and (robot-at ?r ?l) (slot-of ?s ?r) (holding ?s ?p))
+    :effect (and (at ?p ?l) (slot-free ?s) (not (holding ?s ?p)))
+  )
+
+  (:action pickup-artifact
+    :parameters (?r - robot ?a - artifact ?l - location ?s - slot)
+    :precondition (and (robot-at ?r ?l) (at ?a ?l) (not (is-fragile ?a))
+                        (slot-of ?s ?r) (slot-free ?s))
+    :effect (and (holding ?s ?a) (not (at ?a ?l)) (not (slot-free ?s)))
+  )
+
+  (:action putdown-artifact
+    :parameters (?r - robot ?a - artifact ?l - location ?s - slot)
+    :precondition (and (robot-at ?r ?l) (slot-of ?s ?r) (holding ?s ?a))
+    :effect (and (at ?a ?l) (slot-free ?s) (not (holding ?s ?a)))
+  )
+
+  (:action secure-in-pod
+    :parameters (?r - robot ?a - artifact ?p - pod ?l - location ?s - slot)
+    :precondition (and (robot-at ?r ?l) (slot-of ?s ?r) (holding ?s ?p)
+                        (at ?a ?l) (is-fragile ?a))
+    :effect (and (in-pod ?a ?p) (stabilized ?a) (not (at ?a ?l)))
+  )
+
+  (:action unload-from-pod
+    :parameters (?r - robot ?a - artifact ?p - pod ?l - location ?s - slot)
+    :precondition (and (robot-at ?r ?l) (slot-of ?s ?r) (holding ?s ?p) (in-pod ?a ?p))
+    :effect (and (at ?a ?l) (not (in-pod ?a ?p)))
+  )
+
+  (:action cool
+    :parameters (?r - robot ?a - artifact ?s - slot)
+    :precondition (and (slot-of ?s ?r) (holding ?s ?a) (is-alpha ?a) (not (cooled ?a)))
+    :effect (cooled ?a)
+  )
+
+  (:action cool-in-pod
+    :parameters (?r - robot ?a - artifact ?p - pod ?s - slot)
+    :precondition (and (slot-of ?s ?r) (holding ?s ?p) (in-pod ?a ?p)
+                        (is-alpha ?a) (not (cooled ?a)))
+    :effect (cooled ?a)
+  )
+)

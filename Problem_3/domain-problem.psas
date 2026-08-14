@@ -1,0 +1,1203 @@
+;; #state features
+48
++robot-at[curator1,entrance]
++robot-at[drone1,entrance]
++slot-free[slot-c1a]
++slot-free[slot-c1b]
++slot-free[slot-d1a]
++at[pod1,anti-vibration-pods]
++at[pod2,anti-vibration-pods]
++at[art-beta-1,hall-beta]
++at[art-beta-2,hall-beta]
++at[art-alpha-1,hall-alpha]
++at[art-alpha-2,hall-alpha]
++at[core-sample-1,cryo-chamber]
+-cooled[art-alpha-1]
+-cooled[art-alpha-2]
+-sealed[curator1]
++robot-at[drone1,cryo-chamber]
++robot-at[drone1,hall-alpha]
++robot-at[drone1,stasis-lab]
++sealed[curator1]
++robot-at[drone1,hall-beta]
++holding[slot-d1a,core-sample-1]
++holding[slot-d1a,art-alpha-1]
++robot-at[curator1,tunnel]
++holding[slot-d1a,art-beta-1]
++at[core-sample-1,stasis-lab]
++at[art-alpha-1,cryo-chamber]
++robot-at[curator1,anti-vibration-pods]
++robot-at[curator1,hall-alpha]
++robot-at[curator1,cryo-chamber]
++robot-at[curator1,stasis-lab]
++robot-at[curator1,hall-beta]
++at[art-beta-1,stasis-lab]
++holding[slot-c1a,pod1]
++holding[slot-c1a,pod2]
++holding[slot-c1b,pod1]
++holding[slot-c1b,pod2]
++holding[slot-c1a,art-alpha-1]
++holding[slot-c1b,art-alpha-1]
++holding[slot-c1a,core-sample-1]
++holding[slot-c1b,core-sample-1]
++holding[slot-c1a,art-beta-1]
++holding[slot-c1b,art-beta-1]
++in-pod[art-alpha-2,pod1]
++in-pod[art-beta-2,pod1]
++in-pod[art-alpha-2,pod2]
++in-pod[art-beta-2,pod2]
++at[art-alpha-2,cryo-chamber]
++at[art-beta-2,stasis-lab]
+
+;; Mutex Groups
+48
+0 0 +robot-at[curator1,entrance]
+1 1 +robot-at[drone1,entrance]
+2 2 +slot-free[slot-c1a]
+3 3 +slot-free[slot-c1b]
+4 4 +slot-free[slot-d1a]
+5 5 +at[pod1,anti-vibration-pods]
+6 6 +at[pod2,anti-vibration-pods]
+7 7 +at[art-beta-1,hall-beta]
+8 8 +at[art-beta-2,hall-beta]
+9 9 +at[art-alpha-1,hall-alpha]
+10 10 +at[art-alpha-2,hall-alpha]
+11 11 +at[core-sample-1,cryo-chamber]
+12 12 -cooled[art-alpha-1]
+13 13 -cooled[art-alpha-2]
+14 14 -sealed[curator1]
+15 15 +robot-at[drone1,cryo-chamber]
+16 16 +robot-at[drone1,hall-alpha]
+17 17 +robot-at[drone1,stasis-lab]
+18 18 +sealed[curator1]
+19 19 +robot-at[drone1,hall-beta]
+20 20 +holding[slot-d1a,core-sample-1]
+21 21 +holding[slot-d1a,art-alpha-1]
+22 22 +robot-at[curator1,tunnel]
+23 23 +holding[slot-d1a,art-beta-1]
+24 24 +at[core-sample-1,stasis-lab]
+25 25 +at[art-alpha-1,cryo-chamber]
+26 26 +robot-at[curator1,anti-vibration-pods]
+27 27 +robot-at[curator1,hall-alpha]
+28 28 +robot-at[curator1,cryo-chamber]
+29 29 +robot-at[curator1,stasis-lab]
+30 30 +robot-at[curator1,hall-beta]
+31 31 +at[art-beta-1,stasis-lab]
+32 32 +holding[slot-c1a,pod1]
+33 33 +holding[slot-c1a,pod2]
+34 34 +holding[slot-c1b,pod1]
+35 35 +holding[slot-c1b,pod2]
+36 36 +holding[slot-c1a,art-alpha-1]
+37 37 +holding[slot-c1b,art-alpha-1]
+38 38 +holding[slot-c1a,core-sample-1]
+39 39 +holding[slot-c1b,core-sample-1]
+40 40 +holding[slot-c1a,art-beta-1]
+41 41 +holding[slot-c1b,art-beta-1]
+42 42 +in-pod[art-alpha-2,pod1]
+43 43 +in-pod[art-beta-2,pod1]
+44 44 +in-pod[art-alpha-2,pod2]
+45 45 +in-pod[art-beta-2,pod2]
+46 46 +at[art-alpha-2,cryo-chamber]
+47 47 +at[art-beta-2,stasis-lab]
+
+;; further strict Mutex Groups
+0
+
+;; further non strict Mutex Groups
+0
+
+;; known invariants
+0
+
+;; Actions
+122
+1
+29 39 -1
+0 3  0 24  -1
+0 39  -1
+0
+11 -1
+-1
+-1
+1
+11 3 28 -1
+0 39  -1
+0 3  0 11  -1
+0
+28 -1
+-1
+-1
+0
+22 -1
+-1
+-1
+1
+22 18 -1
+0 27  -1
+0 22  -1
+1
+22 18 -1
+0 26  -1
+0 22  -1
+1
+22 18 -1
+0 29  -1
+0 22  -1
+1
+22 18 -1
+0 28  -1
+0 22  -1
+1
+22 18 -1
+0 0  -1
+0 22  -1
+0
+26 -1
+-1
+-1
+1
+26 18 -1
+0 22  -1
+0 26  -1
+0
+27 -1
+-1
+-1
+1
+27 18 -1
+0 22  -1
+0 27  -1
+1
+28 18 -1
+0 22  -1
+0 28  -1
+0
+29 -1
+-1
+-1
+1
+29 18 -1
+0 22  -1
+0 29  -1
+0
+0 -1
+-1
+-1
+1
+0 18 -1
+0 22  -1
+0 0  -1
+1
+22 18 -1
+0 30  -1
+0 22  -1
+0
+30 -1
+-1
+-1
+1
+30 18 -1
+0 22  -1
+0 30  -1
+0
+24 -1
+-1
+-1
+1
+24 3 29 -1
+0 39  -1
+0 3  0 24  -1
+1
+29 38 -1
+0 2  0 24  -1
+0 38  -1
+1
+11 2 28 -1
+0 38  -1
+0 2  0 11  -1
+1
+24 2 29 -1
+0 38  -1
+0 2  0 24  -1
+1
+17 20 -1
+0 4  0 24  -1
+0 20  -1
+1
+11 4 15 -1
+0 20  -1
+0 4  0 11  -1
+0
+15 -1
+-1
+-1
+0
+1 -1
+-1
+-1
+1
+1 -1
+0 15  -1
+0 1  -1
+0
+16 -1
+-1
+-1
+1
+16 -1
+0 15  -1
+0 16  -1
+1
+15 -1
+0 15  -1
+-1
+0
+17 -1
+-1
+-1
+1
+17 -1
+0 15  -1
+0 17  -1
+1
+19 -1
+0 15  -1
+0 19  -1
+0
+19 -1
+-1
+-1
+1
+24 4 17 -1
+0 20  -1
+0 4  0 24  -1
+1
+1 -1
+0 17  -1
+0 1  -1
+1
+16 -1
+0 17  -1
+0 16  -1
+1
+15 -1
+0 17  -1
+0 15  -1
+1
+17 -1
+0 17  -1
+-1
+1
+19 -1
+0 17  -1
+0 19  -1
+1
+28 44 33 -1
+0 46  -1
+0 44  -1
+0
+46 6 -1
+-1
+-1
+1
+6 2 26 -1
+0 33  -1
+0 2  0 6  -1
+1
+28 46 33 -1
+0 44  -1
+0 46  -1
+0
+10 6 -1
+-1
+-1
+1
+10 27 33 -1
+0 44  -1
+0 10  -1
+1
+13 44 33 -1
+-1
+0 13  -1
+1
+28 42 32 -1
+0 46  -1
+0 42  -1
+0
+46 5 -1
+-1
+-1
+1
+5 2 26 -1
+0 32  -1
+0 2  0 5  -1
+1
+46 28 32 -1
+0 42  -1
+0 46  -1
+0
+10 5 -1
+-1
+-1
+1
+10 27 32 -1
+0 42  -1
+0 10  -1
+1
+13 42 32 -1
+-1
+0 13  -1
+1
+28 42 34 -1
+0 46  -1
+0 42  -1
+1
+5 3 26 -1
+0 34  -1
+0 3  0 5  -1
+1
+10 27 34 -1
+0 42  -1
+0 10  -1
+1
+46 28 34 -1
+0 42  -1
+0 46  -1
+1
+13 42 34 -1
+-1
+0 13  -1
+1
+28 44 35 -1
+0 46  -1
+0 44  -1
+1
+6 3 26 -1
+0 35  -1
+0 3  0 6  -1
+1
+10 27 35 -1
+0 44  -1
+0 10  -1
+1
+46 28 35 -1
+0 44  -1
+0 46  -1
+1
+13 44 35 -1
+-1
+0 13  -1
+1
+28 36 -1
+0 2  0 25  -1
+0 36  -1
+0
+9 -1
+-1
+-1
+1
+9 2 27 -1
+0 36  -1
+0 2  0 9  -1
+0
+25 -1
+-1
+-1
+1
+25 2 28 -1
+0 36  -1
+0 2  0 25  -1
+1
+12 36 -1
+-1
+0 12  -1
+1
+28 37 -1
+0 3  0 25  -1
+0 37  -1
+1
+9 3 27 -1
+0 37  -1
+0 3  0 9  -1
+1
+25 3 28 -1
+0 37  -1
+0 3  0 25  -1
+1
+12 37 -1
+-1
+0 12  -1
+1
+15 21 -1
+0 4  0 25  -1
+0 21  -1
+1
+25 4 15 -1
+0 21  -1
+0 4  0 25  -1
+1
+9 4 16 -1
+0 21  -1
+0 4  0 9  -1
+1
+1 -1
+0 16  -1
+0 1  -1
+1
+16 -1
+0 16  -1
+-1
+1
+15 -1
+0 16  -1
+0 15  -1
+1
+17 -1
+0 16  -1
+0 17  -1
+1
+19 -1
+0 16  -1
+0 19  -1
+1
+12 21 -1
+-1
+0 12  -1
+1
+29 45 35 -1
+0 47  -1
+0 45  -1
+0
+8 6 -1
+-1
+-1
+1
+8 30 35 -1
+0 45  -1
+0 8  -1
+0
+47 6 -1
+-1
+-1
+1
+47 29 35 -1
+0 45  -1
+0 47  -1
+1
+29 43 32 -1
+0 47  -1
+0 43  -1
+0
+8 5 -1
+-1
+-1
+1
+8 30 32 -1
+0 43  -1
+0 8  -1
+0
+47 5 -1
+-1
+-1
+1
+47 29 32 -1
+0 43  -1
+0 47  -1
+1
+29 43 34 -1
+0 47  -1
+0 43  -1
+1
+30 8 34 -1
+0 43  -1
+0 8  -1
+1
+29 47 34 -1
+0 43  -1
+0 47  -1
+1
+29 45 33 -1
+0 47  -1
+0 45  -1
+1
+8 30 33 -1
+0 45  -1
+0 8  -1
+1
+47 29 33 -1
+0 45  -1
+0 47  -1
+1
+17 23 -1
+0 4  0 31  -1
+0 23  -1
+0
+7 -1
+-1
+-1
+1
+7 4 19 -1
+0 23  -1
+0 4  0 7  -1
+1
+16 -1
+0 19  -1
+0 16  -1
+1
+19 -1
+0 19  -1
+-1
+1
+17 -1
+0 19  -1
+0 17  -1
+1
+15 -1
+0 19  -1
+0 15  -1
+1
+1 -1
+0 19  -1
+0 1  -1
+1
+19 -1
+0 19  -1
+-1
+0
+31 -1
+-1
+-1
+1
+31 4 17 -1
+0 23  -1
+0 4  0 31  -1
+1
+29 41 -1
+0 3  0 31  -1
+0 41  -1
+1
+7 3 30 -1
+0 41  -1
+0 3  0 7  -1
+1
+31 3 29 -1
+0 41  -1
+0 3  0 31  -1
+1
+29 40 -1
+0 2  0 31  -1
+0 40  -1
+1
+7 2 30 -1
+0 40  -1
+0 2  0 7  -1
+1
+31 2 29 -1
+0 40  -1
+0 2  0 31  -1
+1
+14 -1
+0 18  -1
+0 14  -1
+
+;; initial state
+14 0 8 1 9 2 3 13 4 5 6 7 10 11 12 -1
+
+;; goal
+-1
+
+;; tasks (primitive and abstract)
+159
+0 putdown-artifact[curator1,core-sample-1,stasis-lab,slot-c1b]
+0 __method_precondition_m-transport-plain-nocool[curator1,core-sample-1,cryo-chamber,slot-c1b]
+0 pickup-artifact[curator1,core-sample-1,cryo-chamber,slot-c1b]
+0 __method_precondition_m-goto-arrived[curator1,cryo-chamber]
+0 __method_precondition_m-goto-ground-step_split[curator1,tunnel,hall-alpha]
+0 move-via-tunnel[curator1,tunnel,hall-alpha]
+0 move-via-tunnel[curator1,tunnel,anti-vibration-pods]
+0 move-via-tunnel[curator1,tunnel,stasis-lab]
+0 move-via-tunnel[curator1,tunnel,cryo-chamber]
+0 move-via-tunnel[curator1,tunnel,entrance]
+0 __method_precondition_m-goto-ground-step_split[curator1,anti-vibration-pods,tunnel]
+0 move-via-tunnel[curator1,anti-vibration-pods,tunnel]
+0 __method_precondition_m-goto-ground-step_split[curator1,hall-alpha,tunnel]
+0 move-via-tunnel[curator1,hall-alpha,tunnel]
+0 move-via-tunnel[curator1,cryo-chamber,tunnel]
+0 __method_precondition_m-goto-ground-step_split[curator1,stasis-lab,tunnel]
+0 move-via-tunnel[curator1,stasis-lab,tunnel]
+0 __method_precondition_m-goto-ground-step_split[curator1,entrance,tunnel]
+0 move-via-tunnel[curator1,entrance,tunnel]
+0 move-via-tunnel-to-beta[curator1,tunnel,hall-beta]
+0 __method_precondition_m-goto-ground-step-beta_split[curator1,hall-beta,tunnel]
+0 move-via-tunnel-to-beta[curator1,hall-beta,tunnel]
+0 __method_precondition_m-transport-plain-nocool[curator1,core-sample-1,stasis-lab,slot-c1b]
+0 pickup-artifact[curator1,core-sample-1,stasis-lab,slot-c1b]
+0 putdown-artifact[curator1,core-sample-1,stasis-lab,slot-c1a]
+0 pickup-artifact[curator1,core-sample-1,cryo-chamber,slot-c1a]
+0 pickup-artifact[curator1,core-sample-1,stasis-lab,slot-c1a]
+0 putdown-artifact[drone1,core-sample-1,stasis-lab,slot-d1a]
+0 pickup-artifact[drone1,core-sample-1,cryo-chamber,slot-d1a]
+0 __method_precondition_m-goto-arrived[drone1,cryo-chamber]
+0 __method_precondition_m-goto-fly[drone1,entrance,cryo-chamber]
+0 fly[drone1,entrance,cryo-chamber]
+0 __method_precondition_m-goto-fly[drone1,hall-alpha,cryo-chamber]
+0 fly[drone1,hall-alpha,cryo-chamber]
+0 fly[drone1,cryo-chamber,cryo-chamber]
+0 __method_precondition_m-goto-fly[drone1,stasis-lab,cryo-chamber]
+0 fly[drone1,stasis-lab,cryo-chamber]
+0 fly-from-beta[drone1,hall-beta,cryo-chamber]
+0 __method_precondition_m-goto-fly-from-beta[drone1,hall-beta]
+0 pickup-artifact[drone1,core-sample-1,stasis-lab,slot-d1a]
+0 fly[drone1,entrance,stasis-lab]
+0 fly[drone1,hall-alpha,stasis-lab]
+0 fly[drone1,cryo-chamber,stasis-lab]
+0 fly[drone1,stasis-lab,stasis-lab]
+0 fly-from-beta[drone1,hall-beta,stasis-lab]
+0 unload-from-pod[curator1,art-alpha-2,pod2,cryo-chamber,slot-c1a]
+0 __method_precondition_m-transport-fragile-cool[curator1,art-alpha-2,pod2,anti-vibration-pods,cryo-chamber,slot-c1a]
+0 pickup-pod[curator1,pod2,anti-vibration-pods,slot-c1a]
+0 secure-in-pod[curator1,art-alpha-2,pod2,cryo-chamber,slot-c1a]
+0 __method_precondition_m-transport-fragile-cool[curator1,art-alpha-2,pod2,anti-vibration-pods,hall-alpha,slot-c1a]
+0 secure-in-pod[curator1,art-alpha-2,pod2,hall-alpha,slot-c1a]
+0 cool-in-pod[curator1,art-alpha-2,pod2,slot-c1a]
+0 unload-from-pod[curator1,art-alpha-2,pod1,cryo-chamber,slot-c1a]
+0 __method_precondition_m-transport-fragile-cool[curator1,art-alpha-2,pod1,anti-vibration-pods,cryo-chamber,slot-c1a]
+0 pickup-pod[curator1,pod1,anti-vibration-pods,slot-c1a]
+0 secure-in-pod[curator1,art-alpha-2,pod1,cryo-chamber,slot-c1a]
+0 __method_precondition_m-transport-fragile-cool[curator1,art-alpha-2,pod1,anti-vibration-pods,hall-alpha,slot-c1a]
+0 secure-in-pod[curator1,art-alpha-2,pod1,hall-alpha,slot-c1a]
+0 cool-in-pod[curator1,art-alpha-2,pod1,slot-c1a]
+0 unload-from-pod[curator1,art-alpha-2,pod1,cryo-chamber,slot-c1b]
+0 pickup-pod[curator1,pod1,anti-vibration-pods,slot-c1b]
+0 secure-in-pod[curator1,art-alpha-2,pod1,hall-alpha,slot-c1b]
+0 secure-in-pod[curator1,art-alpha-2,pod1,cryo-chamber,slot-c1b]
+0 cool-in-pod[curator1,art-alpha-2,pod1,slot-c1b]
+0 unload-from-pod[curator1,art-alpha-2,pod2,cryo-chamber,slot-c1b]
+0 pickup-pod[curator1,pod2,anti-vibration-pods,slot-c1b]
+0 secure-in-pod[curator1,art-alpha-2,pod2,hall-alpha,slot-c1b]
+0 secure-in-pod[curator1,art-alpha-2,pod2,cryo-chamber,slot-c1b]
+0 cool-in-pod[curator1,art-alpha-2,pod2,slot-c1b]
+0 putdown-artifact[curator1,art-alpha-1,cryo-chamber,slot-c1a]
+0 __method_precondition_m-transport-plain-cool[curator1,art-alpha-1,hall-alpha,slot-c1a]
+0 pickup-artifact[curator1,art-alpha-1,hall-alpha,slot-c1a]
+0 __method_precondition_m-transport-plain-cool[curator1,art-alpha-1,cryo-chamber,slot-c1a]
+0 pickup-artifact[curator1,art-alpha-1,cryo-chamber,slot-c1a]
+0 cool[curator1,art-alpha-1,slot-c1a]
+0 putdown-artifact[curator1,art-alpha-1,cryo-chamber,slot-c1b]
+0 pickup-artifact[curator1,art-alpha-1,hall-alpha,slot-c1b]
+0 pickup-artifact[curator1,art-alpha-1,cryo-chamber,slot-c1b]
+0 cool[curator1,art-alpha-1,slot-c1b]
+0 putdown-artifact[drone1,art-alpha-1,cryo-chamber,slot-d1a]
+0 pickup-artifact[drone1,art-alpha-1,cryo-chamber,slot-d1a]
+0 pickup-artifact[drone1,art-alpha-1,hall-alpha,slot-d1a]
+0 fly[drone1,entrance,hall-alpha]
+0 fly[drone1,hall-alpha,hall-alpha]
+0 fly[drone1,cryo-chamber,hall-alpha]
+0 fly[drone1,stasis-lab,hall-alpha]
+0 fly-from-beta[drone1,hall-beta,hall-alpha]
+0 cool[drone1,art-alpha-1,slot-d1a]
+0 unload-from-pod[curator1,art-beta-2,pod2,stasis-lab,slot-c1b]
+0 __method_precondition_m-transport-fragile-plain[curator1,art-beta-2,pod2,anti-vibration-pods,hall-beta,slot-c1b]
+0 secure-in-pod[curator1,art-beta-2,pod2,hall-beta,slot-c1b]
+0 __method_precondition_m-transport-fragile-plain[curator1,art-beta-2,pod2,anti-vibration-pods,stasis-lab,slot-c1b]
+0 secure-in-pod[curator1,art-beta-2,pod2,stasis-lab,slot-c1b]
+0 unload-from-pod[curator1,art-beta-2,pod1,stasis-lab,slot-c1a]
+0 __method_precondition_m-transport-fragile-plain[curator1,art-beta-2,pod1,anti-vibration-pods,hall-beta,slot-c1a]
+0 secure-in-pod[curator1,art-beta-2,pod1,hall-beta,slot-c1a]
+0 __method_precondition_m-transport-fragile-plain[curator1,art-beta-2,pod1,anti-vibration-pods,stasis-lab,slot-c1a]
+0 secure-in-pod[curator1,art-beta-2,pod1,stasis-lab,slot-c1a]
+0 unload-from-pod[curator1,art-beta-2,pod1,stasis-lab,slot-c1b]
+0 secure-in-pod[curator1,art-beta-2,pod1,hall-beta,slot-c1b]
+0 secure-in-pod[curator1,art-beta-2,pod1,stasis-lab,slot-c1b]
+0 unload-from-pod[curator1,art-beta-2,pod2,stasis-lab,slot-c1a]
+0 secure-in-pod[curator1,art-beta-2,pod2,hall-beta,slot-c1a]
+0 secure-in-pod[curator1,art-beta-2,pod2,stasis-lab,slot-c1a]
+0 putdown-artifact[drone1,art-beta-1,stasis-lab,slot-d1a]
+0 __method_precondition_m-transport-plain-nocool[drone1,art-beta-1,hall-beta,slot-d1a]
+0 pickup-artifact[drone1,art-beta-1,hall-beta,slot-d1a]
+0 fly-to-beta[drone1,hall-alpha,hall-beta]
+0 fly-to-beta[drone1,hall-beta,hall-beta]
+0 fly-to-beta[drone1,stasis-lab,hall-beta]
+0 fly-to-beta[drone1,cryo-chamber,hall-beta]
+0 fly-to-beta[drone1,entrance,hall-beta]
+0 fly-from-beta[drone1,hall-beta,hall-beta]
+0 __method_precondition_m-transport-plain-nocool[drone1,art-beta-1,stasis-lab,slot-d1a]
+0 pickup-artifact[drone1,art-beta-1,stasis-lab,slot-d1a]
+0 putdown-artifact[curator1,art-beta-1,stasis-lab,slot-c1b]
+0 pickup-artifact[curator1,art-beta-1,hall-beta,slot-c1b]
+0 pickup-artifact[curator1,art-beta-1,stasis-lab,slot-c1b]
+0 putdown-artifact[curator1,art-beta-1,stasis-lab,slot-c1a]
+0 pickup-artifact[curator1,art-beta-1,hall-beta,slot-c1a]
+0 pickup-artifact[curator1,art-beta-1,stasis-lab,slot-c1a]
+0 activate-sealing[curator1]
+1 __top[]
+1 m-handle-plain_splitted_4[core-sample-1,stasis-lab]
+1 t-transport-plain[curator1,core-sample-1,stasis-lab]
+1 m-transport-plain-nocool_splitted_9[curator1,core-sample-1,slot-c1b]
+1 t-goto[curator1,cryo-chamber]
+1 m-goto-ground-step_splitted_1[curator1]
+1 m-goto-ground-step-beta_splitted_2[curator1]
+1 t-goto[curator1,stasis-lab]
+1 m-transport-plain-nocool_splitted_9[curator1,core-sample-1,slot-c1a]
+1 m-transport-plain-nocool_splitted_9[drone1,core-sample-1,slot-d1a]
+1 t-goto[drone1,cryo-chamber]
+1 t-goto[drone1,stasis-lab]
+1 t-transport-fragile[curator1,art-alpha-2,cryo-chamber]
+1 m-transport-fragile-cool_splitted_10[curator1,art-alpha-2,pod2,slot-c1a]
+1 t-goto[curator1,anti-vibration-pods]
+1 t-goto[curator1,hall-alpha]
+1 m-transport-fragile-cool_splitted_10[curator1,art-alpha-2,pod1,slot-c1a]
+1 m-transport-fragile-cool_splitted_10[curator1,art-alpha-2,pod1,slot-c1b]
+1 m-transport-fragile-cool_splitted_10[curator1,art-alpha-2,pod2,slot-c1b]
+1 m-handle-alpha-only_splitted_3[art-alpha-1,cryo-chamber]
+1 t-transport-plain[curator1,art-alpha-1,cryo-chamber]
+1 m-transport-plain-cool_splitted_8[curator1,art-alpha-1,slot-c1a]
+1 m-transport-plain-cool_splitted_8[curator1,art-alpha-1,slot-c1b]
+1 m-transport-plain-cool_splitted_8[drone1,art-alpha-1,slot-d1a]
+1 t-goto[drone1,hall-alpha]
+1 t-transport-fragile[curator1,art-beta-2,stasis-lab]
+1 m-transport-fragile-plain_splitted_11[curator1,art-beta-2,pod2,slot-c1b]
+1 t-goto[curator1,hall-beta]
+1 m-transport-fragile-plain_splitted_11[curator1,art-beta-2,pod1,slot-c1a]
+1 m-transport-fragile-plain_splitted_11[curator1,art-beta-2,pod1,slot-c1b]
+1 m-transport-fragile-plain_splitted_11[curator1,art-beta-2,pod2,slot-c1a]
+1 m-handle-plain_splitted_4[art-beta-1,stasis-lab]
+1 m-transport-plain-nocool_splitted_9[drone1,art-beta-1,slot-d1a]
+1 t-goto[drone1,hall-beta]
+1 t-transport-plain[curator1,art-beta-1,stasis-lab]
+1 m-transport-plain-nocool_splitted_9[curator1,art-beta-1,slot-c1b]
+1 m-transport-plain-nocool_splitted_9[curator1,art-beta-1,slot-c1a]
+
+;; initial abstract task
+122
+
+;; methods
+107
+<<<<<<<__top_method;t-mission[];m-mission;0;-1,-2,-3,-4,-5,-6>;t-handle-artifact[core-sample-1];m-handle-plain;5;0,1,2,3,4,-1>;t-handle-artifact[art-alpha-2];m-handle-alpha-fragile;4;0,1,2,3,-1,5>;t-handle-artifact[art-alpha-1];m-handle-alpha-only;3;0,1,2,-1,4,5>;t-handle-artifact[art-beta-2];m-handle-fragile-only;2;0,1,-1,3,4,5>;t-handle-artifact[art-beta-1];m-handle-plain;1;0,-1,2,3,4,5>;m-mission_splitted_5[];_splitting_method_m-mission_splitted_5;0;-1,1,2,3,4,5>
+122
+121 153 147 141 134 123 -1
+4 5 3 4 2 3 1 2 0 1 -1
+_splitting_method_m-handle-plain_splitted_4
+123
+124 -1
+-1
+m-transport-plain-nocool
+124
+125 129 0 -1
+0 2 0 1 1 2 -1
+_splitting_method_m-transport-plain-nocool_splitted_9
+125
+1 126 2 -1
+0 2 0 1 1 2 -1
+m-goto-arrived
+126
+3 -1
+-1
+m-goto-ground-step
+126
+127 126 -1
+0 1 -1
+_splitting_method_m-goto-ground-step_splitted_1
+127
+4 5 -1
+0 1 -1
+_splitting_method_m-goto-ground-step_splitted_1
+127
+4 6 -1
+0 1 -1
+_splitting_method_m-goto-ground-step_splitted_1
+127
+4 7 -1
+0 1 -1
+_splitting_method_m-goto-ground-step_splitted_1
+127
+4 8 -1
+0 1 -1
+_splitting_method_m-goto-ground-step_splitted_1
+127
+4 9 -1
+0 1 -1
+_splitting_method_m-goto-ground-step_splitted_1
+127
+10 11 -1
+0 1 -1
+_splitting_method_m-goto-ground-step_splitted_1
+127
+12 13 -1
+0 1 -1
+_splitting_method_m-goto-ground-step_splitted_1
+127
+3 14 -1
+0 1 -1
+_splitting_method_m-goto-ground-step_splitted_1
+127
+15 16 -1
+0 1 -1
+_splitting_method_m-goto-ground-step_splitted_1
+127
+17 18 -1
+0 1 -1
+m-goto-ground-step-beta
+126
+128 126 -1
+0 1 -1
+_splitting_method_m-goto-ground-step-beta_splitted_2
+128
+4 19 -1
+0 1 -1
+_splitting_method_m-goto-ground-step-beta_splitted_2
+128
+20 21 -1
+0 1 -1
+_splitting_method_m-transport-plain-nocool_splitted_9
+125
+22 129 23 -1
+0 2 0 1 1 2 -1
+m-goto-arrived
+129
+15 -1
+-1
+m-goto-ground-step
+129
+127 129 -1
+0 1 -1
+m-goto-ground-step-beta
+129
+128 129 -1
+0 1 -1
+m-transport-plain-nocool
+124
+130 129 24 -1
+0 2 0 1 1 2 -1
+_splitting_method_m-transport-plain-nocool_splitted_9
+130
+1 126 25 -1
+0 2 0 1 1 2 -1
+_splitting_method_m-transport-plain-nocool_splitted_9
+130
+22 129 26 -1
+0 2 0 1 1 2 -1
+<_splitting_method_m-handle-plain_splitted_4;t-transport-plain[drone1,core-sample-1,stasis-lab];m-transport-plain-nocool;0;-1,-2,-3>
+123
+131 133 27 -1
+0 2 0 1 1 2 -1
+_splitting_method_m-transport-plain-nocool_splitted_9
+131
+1 132 28 -1
+0 2 0 1 1 2 -1
+m-goto-arrived
+132
+29 -1
+-1
+m-goto-fly
+132
+30 31 -1
+0 1 -1
+m-goto-fly
+132
+32 33 -1
+0 1 -1
+m-goto-fly
+132
+29 34 -1
+0 1 -1
+m-goto-fly
+132
+35 36 -1
+0 1 -1
+m-goto-fly-from-beta
+132
+38 37 -1
+0 1 -1
+_splitting_method_m-transport-plain-nocool_splitted_9
+131
+22 133 39 -1
+0 2 0 1 1 2 -1
+m-goto-arrived
+133
+35 -1
+-1
+m-goto-fly
+133
+30 40 -1
+0 1 -1
+m-goto-fly
+133
+32 41 -1
+0 1 -1
+m-goto-fly
+133
+29 42 -1
+0 1 -1
+m-goto-fly
+133
+35 43 -1
+0 1 -1
+m-goto-fly-from-beta
+133
+38 44 -1
+0 1 -1
+m-transport-fragile-cool
+134
+135 51 126 45 -1
+0 3 0 1 0 2 1 2 2 3 -1
+<_splitting_method_m-transport-fragile-cool_splitted_10;m-transport-fragile-cool_splitted_6[curator1,pod2,slot-c1a,art-alpha-2,cryo-chamber];_splitting_method_m-transport-fragile-cool_splitted_6;0;-1,-2,-3,1,2>
+135
+46 136 47 126 48 -1
+0 4 0 3 0 2 0 1 3 4 2 4 2 3 1 4 1 3 1 2 -1
+m-goto-arrived
+136
+10 -1
+-1
+m-goto-ground-step
+136
+127 136 -1
+0 1 -1
+m-goto-ground-step-beta
+136
+128 136 -1
+0 1 -1
+<_splitting_method_m-transport-fragile-cool_splitted_10;m-transport-fragile-cool_splitted_6[curator1,pod2,slot-c1a,art-alpha-2,hall-alpha];_splitting_method_m-transport-fragile-cool_splitted_6;0;-1,-2,-3,1,2>
+135
+49 136 47 137 50 -1
+0 4 0 3 0 2 0 1 3 4 2 4 2 3 1 4 1 3 1 2 -1
+m-goto-arrived
+137
+12 -1
+-1
+m-goto-ground-step
+137
+127 137 -1
+0 1 -1
+m-goto-ground-step-beta
+137
+128 137 -1
+0 1 -1
+m-transport-fragile-cool
+134
+138 58 126 52 -1
+0 3 0 1 0 2 1 2 2 3 -1
+<_splitting_method_m-transport-fragile-cool_splitted_10;m-transport-fragile-cool_splitted_6[curator1,pod1,slot-c1a,art-alpha-2,cryo-chamber];_splitting_method_m-transport-fragile-cool_splitted_6;0;-1,-2,-3,1,2>
+138
+53 136 54 126 55 -1
+0 4 0 3 0 2 0 1 3 4 2 4 2 3 1 4 1 3 1 2 -1
+<_splitting_method_m-transport-fragile-cool_splitted_10;m-transport-fragile-cool_splitted_6[curator1,pod1,slot-c1a,art-alpha-2,hall-alpha];_splitting_method_m-transport-fragile-cool_splitted_6;0;-1,-2,-3,1,2>
+138
+56 136 54 137 57 -1
+0 4 0 3 0 2 0 1 3 4 2 4 2 3 1 4 1 3 1 2 -1
+m-transport-fragile-cool
+134
+139 63 126 59 -1
+0 3 0 1 0 2 1 2 2 3 -1
+<_splitting_method_m-transport-fragile-cool_splitted_10;m-transport-fragile-cool_splitted_6[curator1,pod1,slot-c1b,art-alpha-2,hall-alpha];_splitting_method_m-transport-fragile-cool_splitted_6;0;-1,-2,-3,1,2>
+139
+56 136 60 137 61 -1
+0 4 0 3 0 2 0 1 3 4 2 4 2 3 1 4 1 3 1 2 -1
+<_splitting_method_m-transport-fragile-cool_splitted_10;m-transport-fragile-cool_splitted_6[curator1,pod1,slot-c1b,art-alpha-2,cryo-chamber];_splitting_method_m-transport-fragile-cool_splitted_6;0;-1,-2,-3,1,2>
+139
+53 136 60 126 62 -1
+0 4 0 3 0 2 0 1 3 4 2 4 2 3 1 4 1 3 1 2 -1
+m-transport-fragile-cool
+134
+140 68 126 64 -1
+0 3 0 1 0 2 1 2 2 3 -1
+<_splitting_method_m-transport-fragile-cool_splitted_10;m-transport-fragile-cool_splitted_6[curator1,pod2,slot-c1b,art-alpha-2,hall-alpha];_splitting_method_m-transport-fragile-cool_splitted_6;0;-1,-2,-3,1,2>
+140
+49 136 65 137 66 -1
+0 4 0 3 0 2 0 1 3 4 2 4 2 3 1 4 1 3 1 2 -1
+<_splitting_method_m-transport-fragile-cool_splitted_10;m-transport-fragile-cool_splitted_6[curator1,pod2,slot-c1b,art-alpha-2,cryo-chamber];_splitting_method_m-transport-fragile-cool_splitted_6;0;-1,-2,-3,1,2>
+140
+46 136 65 126 67 -1
+0 4 0 3 0 2 0 1 3 4 2 4 2 3 1 4 1 3 1 2 -1
+_splitting_method_m-handle-alpha-only_splitted_3
+141
+142 -1
+-1
+m-transport-plain-cool
+142
+143 74 126 69 -1
+0 3 0 1 0 2 1 2 2 3 -1
+_splitting_method_m-transport-plain-cool_splitted_8
+143
+70 137 71 -1
+0 2 0 1 1 2 -1
+_splitting_method_m-transport-plain-cool_splitted_8
+143
+72 126 73 -1
+0 2 0 1 1 2 -1
+m-transport-plain-cool
+142
+144 78 126 75 -1
+0 3 0 1 0 2 1 2 2 3 -1
+_splitting_method_m-transport-plain-cool_splitted_8
+144
+70 137 76 -1
+0 2 0 1 1 2 -1
+_splitting_method_m-transport-plain-cool_splitted_8
+144
+72 126 77 -1
+0 2 0 1 1 2 -1
+<_splitting_method_m-handle-alpha-only_splitted_3;t-transport-plain[drone1,art-alpha-1,cryo-chamber];m-transport-plain-cool;0;-1,-2,-3,-4>
+141
+145 87 132 79 -1
+0 3 0 1 0 2 1 2 2 3 -1
+_splitting_method_m-transport-plain-cool_splitted_8
+145
+72 132 80 -1
+0 2 0 1 1 2 -1
+_splitting_method_m-transport-plain-cool_splitted_8
+145
+70 146 81 -1
+0 2 0 1 1 2 -1
+m-goto-arrived
+146
+32 -1
+-1
+m-goto-fly
+146
+30 82 -1
+0 1 -1
+m-goto-fly
+146
+32 83 -1
+0 1 -1
+m-goto-fly
+146
+29 84 -1
+0 1 -1
+m-goto-fly
+146
+35 85 -1
+0 1 -1
+m-goto-fly-from-beta
+146
+38 86 -1
+0 1 -1
+m-transport-fragile-plain
+147
+148 129 88 -1
+0 2 0 1 1 2 -1
+<_splitting_method_m-transport-fragile-plain_splitted_11;m-transport-fragile-plain_splitted_7[curator1,pod2,slot-c1b,art-beta-2,hall-beta];_splitting_method_m-transport-fragile-plain_splitted_7;0;-1,-2,-3,1,2>
+148
+89 136 65 149 90 -1
+0 4 0 3 0 2 0 1 3 4 2 4 2 3 1 4 1 3 1 2 -1
+m-goto-arrived
+149
+20 -1
+-1
+m-goto-ground-step
+149
+127 149 -1
+0 1 -1
+m-goto-ground-step-beta
+149
+128 149 -1
+0 1 -1
+<_splitting_method_m-transport-fragile-plain_splitted_11;m-transport-fragile-plain_splitted_7[curator1,pod2,slot-c1b,art-beta-2,stasis-lab];_splitting_method_m-transport-fragile-plain_splitted_7;0;-1,-2,-3,1,2>
+148
+91 136 65 129 92 -1
+0 4 0 3 0 2 0 1 3 4 2 4 2 3 1 4 1 3 1 2 -1
+m-transport-fragile-plain
+147
+150 129 93 -1
+0 2 0 1 1 2 -1
+<_splitting_method_m-transport-fragile-plain_splitted_11;m-transport-fragile-plain_splitted_7[curator1,pod1,slot-c1a,art-beta-2,hall-beta];_splitting_method_m-transport-fragile-plain_splitted_7;0;-1,-2,-3,1,2>
+150
+94 136 54 149 95 -1
+0 4 0 3 0 2 0 1 3 4 2 4 2 3 1 4 1 3 1 2 -1
+<_splitting_method_m-transport-fragile-plain_splitted_11;m-transport-fragile-plain_splitted_7[curator1,pod1,slot-c1a,art-beta-2,stasis-lab];_splitting_method_m-transport-fragile-plain_splitted_7;0;-1,-2,-3,1,2>
+150
+96 136 54 129 97 -1
+0 4 0 3 0 2 0 1 3 4 2 4 2 3 1 4 1 3 1 2 -1
+m-transport-fragile-plain
+147
+151 129 98 -1
+0 2 0 1 1 2 -1
+<_splitting_method_m-transport-fragile-plain_splitted_11;m-transport-fragile-plain_splitted_7[curator1,pod1,slot-c1b,art-beta-2,hall-beta];_splitting_method_m-transport-fragile-plain_splitted_7;0;-1,-2,-3,1,2>
+151
+94 136 60 149 99 -1
+0 4 0 3 0 2 0 1 3 4 2 4 2 3 1 4 1 3 1 2 -1
+<_splitting_method_m-transport-fragile-plain_splitted_11;m-transport-fragile-plain_splitted_7[curator1,pod1,slot-c1b,art-beta-2,stasis-lab];_splitting_method_m-transport-fragile-plain_splitted_7;0;-1,-2,-3,1,2>
+151
+96 136 60 129 100 -1
+0 4 0 3 0 2 0 1 3 4 2 4 2 3 1 4 1 3 1 2 -1
+m-transport-fragile-plain
+147
+152 129 101 -1
+0 2 0 1 1 2 -1
+<_splitting_method_m-transport-fragile-plain_splitted_11;m-transport-fragile-plain_splitted_7[curator1,pod2,slot-c1a,art-beta-2,hall-beta];_splitting_method_m-transport-fragile-plain_splitted_7;0;-1,-2,-3,1,2>
+152
+89 136 47 149 102 -1
+0 4 0 3 0 2 0 1 3 4 2 4 2 3 1 4 1 3 1 2 -1
+<_splitting_method_m-transport-fragile-plain_splitted_11;m-transport-fragile-plain_splitted_7[curator1,pod2,slot-c1a,art-beta-2,stasis-lab];_splitting_method_m-transport-fragile-plain_splitted_7;0;-1,-2,-3,1,2>
+152
+91 136 47 129 103 -1
+0 4 0 3 0 2 0 1 3 4 2 4 2 3 1 4 1 3 1 2 -1
+<_splitting_method_m-handle-plain_splitted_4;t-transport-plain[drone1,art-beta-1,stasis-lab];m-transport-plain-nocool;0;-1,-2,-3>
+153
+154 133 104 -1
+0 2 0 1 1 2 -1
+_splitting_method_m-transport-plain-nocool_splitted_9
+154
+105 155 106 -1
+0 2 0 1 1 2 -1
+m-goto-arrived
+155
+38 -1
+-1
+m-goto-fly-to-beta
+155
+32 107 -1
+0 1 -1
+m-goto-fly-to-beta
+155
+38 108 -1
+0 1 -1
+m-goto-fly-to-beta
+155
+35 109 -1
+0 1 -1
+m-goto-fly-to-beta
+155
+29 110 -1
+0 1 -1
+m-goto-fly-to-beta
+155
+30 111 -1
+0 1 -1
+m-goto-fly-from-beta
+155
+38 112 -1
+0 1 -1
+_splitting_method_m-transport-plain-nocool_splitted_9
+154
+113 133 114 -1
+0 2 0 1 1 2 -1
+_splitting_method_m-handle-plain_splitted_4
+153
+156 -1
+-1
+m-transport-plain-nocool
+156
+157 129 115 -1
+0 2 0 1 1 2 -1
+_splitting_method_m-transport-plain-nocool_splitted_9
+157
+105 149 116 -1
+0 2 0 1 1 2 -1
+_splitting_method_m-transport-plain-nocool_splitted_9
+157
+113 129 117 -1
+0 2 0 1 1 2 -1
+m-transport-plain-nocool
+156
+158 129 118 -1
+0 2 0 1 1 2 -1
+_splitting_method_m-transport-plain-nocool_splitted_9
+158
+105 149 119 -1
+0 2 0 1 1 2 -1
+_splitting_method_m-transport-plain-nocool_splitted_9
+158
+113 129 120 -1
+0 2 0 1 1 2 -1
