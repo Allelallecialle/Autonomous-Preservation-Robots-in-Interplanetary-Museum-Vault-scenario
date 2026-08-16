@@ -1,0 +1,231 @@
+----------- Non-Seismic domain TFD solution --------------
+
+Parsing...
+Contains quantified condition(s): False
+Instantiating...
+Trivial rules: Converted to facts.
+Starting instantiation [110 rules]...
+Finding invariants...
+Finding invariants... 24 initial candidates
+[0.010s CPU, 0.008s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups...
+Choosing groups...
+93 uncovered facts (before using the results from the invariant synthesis)
+5 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Found 0 axioms that are always true and 0 that are always false
+constrained 379 conditions
+Writing output...
+Done!
+contains_quantified_conditions: 0
+Building causal graph...
+The causal graph is not acyclic.
+21 variables of 21 necessary
+379 of 379 operators necessary.
+0 of 0 Axiom_relational rules necessary.
+0 of 0 Axiom_functional rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+all_operator_indices.size(): 379
+Writing output...
+printing SG 
+21
+done
+
+
+Planner Paramters:
+Anytime Search: Disabled
+Timeout if plan was found: 0 seconds (no timeout)
+Timeout while no plan was found: 0 seconds (no timeout)
+Greedy Search: Disabled
+Verbose: Enabled
+Lazy Heuristic Evaluation: Enabled
+Use caching in heuristic.
+Cyclic CG heuristic: Enabled    Preferred Operators: Enabled
+Makespan heuristic: Disabled    Preferred Operators: Disabled
+No Heuristic: Disabled
+Cg Heuristic Zero Cost Waiting Transitions: Enabled
+Cg Heuristic Fire Waiting Transitions Only If Local Problems Matches State: Disabled
+PrefOpsOrderedMode: Enabled with 1 goals
+PrefOpsCheapestMode: Enabled with 1 goals
+PrefOpsMostExpensiveMode: Disabled with 1000 goals
+PrefOpsRandMode: Disabled with 1000 goals
+PrefOpsConcurrentMode: Disabled
+Reset after solution was found: Enabled
+Reward only preferred operators queue: Disabled
+GValues by: Timestamp
+Queue management mode: Priority based
+Known by logical state only filtering: Disabled
+use_subgoals_to_break_makespan_ties: Disabled
+Reschedule plans: Enabled
+Epsilonize internally: Enabled
+Epsilonize externally: Disabled
+Keep original plans: Enabled
+Plan name: "./output_plan"
+Plan monitor file: "" (no monitoring)
+Monitoring verify timestamps: Disabled
+
+Contains universal conditions: 0
+Giving prior boost to open list 0
+INIT
+Open list sizes (priorities): 0 (-5000),  0 (0),  0 (0),  0 (0), 
+Initializing cyclic causal graph heuristic...done.
+Best heuristic values of queues: 138/-1/-1/-1 [expanded 1 state(s)]
+Best heuristic values of queues: 135.98/-1/-1/-1 [expanded 2 state(s)]
+Best heuristic values of queues: 134/-1/-1/-1 [expanded 3 state(s)]
+Best heuristic values of queues: 131.98/-1/-1/-1 [expanded 6 state(s)]
+Best heuristic values of queues: 130/-1/-1/-1 [expanded 7 state(s)]
+Best heuristic values of queues: 128.98/-1/-1/-1 [expanded 8 state(s)]
+Best heuristic values of queues: 128/-1/-1/-1 [expanded 9 state(s)]
+Best heuristic values of queues: 126.98/-1/-1/-1 [expanded 16 state(s)]
+Best heuristic values of queues: 126/-1/-1/-1 [expanded 17 state(s)]
+Best heuristic values of queues: 123.98/-1/-1/-1 [expanded 18 state(s)]
+Best heuristic values of queues: 122/-1/-1/-1 [expanded 19 state(s)]
+Best heuristic values of queues: 120.98/-1/-1/-1 [expanded 24 state(s)]
+Best heuristic values of queues: 120/-1/-1/-1 [expanded 25 state(s)]
+Best heuristic values of queues: 107.98/-1/-1/-1 [expanded 26 state(s)]
+Best heuristic values of queues: 107/-1/-1/-1 [expanded 27 state(s)]
+Best heuristic values of queues: 70.98/-1/-1/-1 [expanded 28 state(s)]
+Best heuristic values of queues: 65.98/-1/-1/-1 [expanded 33 state(s)]
+Best heuristic values of queues: 65/-1/-1/-1 [expanded 34 state(s)]
+Best heuristic values of queues: 46.98/-1/-1/-1 [expanded 35 state(s)]
+Best heuristic values of queues: 42.98/-1/-1/-1 [expanded 39 state(s)]
+Best heuristic values of queues: 41/-1/-1/-1 [expanded 40 state(s)]
+Best heuristic values of queues: 31.98/-1/-1/-1 [expanded 41 state(s)]
+Best heuristic values of queues: 29/-1/-1/-1 [expanded 50 state(s)]
+Best heuristic values of queues: 26.98/-1/-1/-1 [expanded 51 state(s)]
+Best heuristic values of queues: 25/-1/-1/-1 [expanded 52 state(s)]
+Best heuristic values of queues: 21.98/-1/-1/-1 [expanded 53 state(s)]
+Best heuristic values of queues: 19/-1/-1/-1 [expanded 54 state(s)]
+Best heuristic values of queues: 18.98/-1/-1/-1 [expanded 57 state(s)]
+Best heuristic values of queues: 17/-1/-1/-1 [expanded 58 state(s)]
+Best heuristic values of queues: 16.98/-1/-1/-1 [expanded 59 state(s)]
+Best heuristic values of queues: 15/-1/-1/-1 [expanded 60 state(s)]
+Best heuristic values of queues: 15/28.98/-1/-1 [expanded 65 state(s)]
+Best heuristic values of queues: 14/28.98/-1/-1 [expanded 76 state(s)]
+Best heuristic values of queues: 13.98/28.98/-1/-1 [expanded 77 state(s)]
+Best heuristic values of queues: 11/28.98/-1/-1 [expanded 78 state(s)]
+Best heuristic values of queues: 10.98/28.98/-1/-1 [expanded 79 state(s)]
+Best heuristic values of queues: 8/28.98/-1/-1 [expanded 80 state(s)]
+Best heuristic values of queues: 7.98/28.98/-1/-1 [expanded 81 state(s)]
+Best heuristic values of queues: 6/28.98/-1/-1 [expanded 82 state(s)]
+Best heuristic values of queues: 5.98/28.98/-1/-1 [expanded 83 state(s)]
+Best heuristic values of queues: 4/28.98/-1/-1 [expanded 84 state(s)]
+Best heuristic values of queues: 4/13.98/-1/-1 [expanded 88 state(s)]
+Best heuristic values of queues: 4/9.98/-1/-1 [expanded 101 state(s)]
+Best heuristic values of queues: 4/9.98/-1/-1 [expanded 104 state(s)]
+Best heuristic values of queues: 4/9.98/26.97/-1 [expanded 1052 state(s)]
+Best heuristic values of queues: 4/9.98/8.97/-1 [expanded 1072 state(s)]
+Best heuristic values of queues: 2/9.98/8.97/-1 [expanded 1108 state(s)]
+Best heuristic values of queues: 0/9.98/8.97/-1 [expanded 1110 state(s)]
+New solution has been found.
+
+Found new plan:
+0.00000000: (fly drone1 entrance hall-alpha) [2.00000000]
+2.01000000: (pickup-artifact drone1 art-alpha-1 hall-alpha slot-d1a) [1.00000000]
+3.02000000: (fly drone1 hall-alpha cryo-chamber) [2.00000000]
+5.03000000: (putdown-artifact drone1 art-alpha-1 cryo-chamber slot-d1a) [1.00000000]
+6.04000000: (pickup-artifact drone1 core-sample-1 cryo-chamber slot-d1a) [1.00000000]
+7.05000000: (fly drone1 cryo-chamber stasis-lab) [2.00000000]
+9.06000000: (putdown-artifact drone1 core-sample-1 stasis-lab slot-d1a) [1.00000000]
+10.07000000: (fly-to-beta drone1 stasis-lab hall-beta) [2.00000000]
+12.08000000: (pickup-artifact drone1 art-beta-1 hall-beta slot-d1a) [1.00000000]
+13.09000000: (fly-from-beta drone1 hall-beta stasis-lab) [2.00000000]
+15.10000000: (putdown-artifact drone1 art-beta-1 stasis-lab slot-d1a) [1.00000000]
+16.11000000: (activate-sealing curator1) [1.00000000]
+17.12000000: (move-via-tunnel curator1 entrance tunnel) [3.00000000]
+17.13000000: (fly drone1 stasis-lab cryo-chamber) [2.00000000]
+20.13000000: (move-via-tunnel curator1 tunnel anti-vibration-pods) [3.00000000]
+23.14000000: (pickup-pod curator1 pod1 anti-vibration-pods slot-c1b) [1.00000000]
+24.15000000: (move-via-tunnel curator1 anti-vibration-pods tunnel) [3.00000000]
+27.16000000: (move-via-tunnel curator1 tunnel hall-alpha) [3.00000000]
+30.17000000: (secure-in-pod curator1 art-alpha-2 pod1 hall-alpha slot-c1b) [2.00000000]
+32.18000000: (cool-in-pod curator1 art-alpha-2 pod1 slot-c1b) [3.00000000]
+32.19000000: (move-via-tunnel curator1 hall-alpha tunnel) [3.00000000]
+32.20000000: (pickup-artifact drone1 art-alpha-1 cryo-chamber slot-d1a) [1.00000000]
+33.21000000: (cool drone1 art-alpha-1 slot-d1a) [3.00000000]
+36.22000000: (putdown-artifact drone1 art-alpha-1 cryo-chamber slot-d1a) [1.00000000]
+37.23000000: (move-via-tunnel curator1 tunnel cryo-chamber) [3.00000000]
+40.24000000: (unload-from-pod curator1 art-alpha-2 pod1 cryo-chamber slot-c1b) [2.00000000]
+42.25000000: (move-via-tunnel curator1 cryo-chamber tunnel) [3.00000000]
+45.26000000: (move-via-tunnel-to-beta curator1 tunnel hall-beta) [3.00000000]
+48.27000000: (secure-in-pod curator1 art-beta-2 pod1 hall-beta slot-c1b) [2.00000000]
+50.28000000: (move-via-tunnel-to-beta curator1 hall-beta tunnel) [3.00000000]
+53.29000000: (move-via-tunnel curator1 tunnel stasis-lab) [3.00000000]
+56.30000000: (unload-from-pod curator1 art-beta-2 pod1 stasis-lab slot-c1b) [2.00000000]
+Rescheduled Plan:
+0.00100000: (fly drone1 entrance hall-alpha) [2.00000000]
+2.01100000: (pickup-artifact drone1 art-alpha-1 hall-alpha slot-d1a) [1.00000000]
+3.02100000: (fly drone1 hall-alpha cryo-chamber) [2.00000000]
+5.03100000: (putdown-artifact drone1 art-alpha-1 cryo-chamber slot-d1a) [1.00000000]
+6.04100000: (pickup-artifact drone1 core-sample-1 cryo-chamber slot-d1a) [1.00000000]
+7.05100000: (fly drone1 cryo-chamber stasis-lab) [2.00000000]
+9.06100000: (putdown-artifact drone1 core-sample-1 stasis-lab slot-d1a) [1.00000000]
+10.07100000: (fly-to-beta drone1 stasis-lab hall-beta) [2.00000000]
+12.08100000: (pickup-artifact drone1 art-beta-1 hall-beta slot-d1a) [1.00000000]
+13.09100000: (fly-from-beta drone1 hall-beta stasis-lab) [2.00000000]
+15.10100000: (putdown-artifact drone1 art-beta-1 stasis-lab slot-d1a) [1.00000000]
+0.00100000: (activate-sealing curator1) [1.00000000]
+1.01100000: (move-via-tunnel curator1 entrance tunnel) [3.00000000]
+16.11100000: (fly drone1 stasis-lab cryo-chamber) [2.00000000]
+4.02100000: (move-via-tunnel curator1 tunnel anti-vibration-pods) [3.00000000]
+7.03100000: (pickup-pod curator1 pod1 anti-vibration-pods slot-c1b) [1.00000000]
+8.04100000: (move-via-tunnel curator1 anti-vibration-pods tunnel) [3.00000000]
+11.05100000: (move-via-tunnel curator1 tunnel hall-alpha) [3.00000000]
+14.06100000: (secure-in-pod curator1 art-alpha-2 pod1 hall-alpha slot-c1b) [2.00000000]
+16.07100000: (cool-in-pod curator1 art-alpha-2 pod1 slot-c1b) [3.00000000]
+16.08100000: (move-via-tunnel curator1 hall-alpha tunnel) [3.00000000]
+18.12100000: (pickup-artifact drone1 art-alpha-1 cryo-chamber slot-d1a) [1.00000000]
+19.13100000: (cool drone1 art-alpha-1 slot-d1a) [3.00000000]
+22.14100000: (putdown-artifact drone1 art-alpha-1 cryo-chamber slot-d1a) [1.00000000]
+19.09100000: (move-via-tunnel curator1 tunnel cryo-chamber) [3.00000000]
+22.10100000: (unload-from-pod curator1 art-alpha-2 pod1 cryo-chamber slot-c1b) [2.00000000]
+24.11100000: (move-via-tunnel curator1 cryo-chamber tunnel) [3.00000000]
+27.12100000: (move-via-tunnel-to-beta curator1 tunnel hall-beta) [3.00000000]
+30.13100000: (secure-in-pod curator1 art-beta-2 pod1 hall-beta slot-c1b) [2.00000000]
+32.14100000: (move-via-tunnel-to-beta curator1 hall-beta tunnel) [3.00000000]
+35.15100000: (move-via-tunnel curator1 tunnel stasis-lab) [3.00000000]
+38.16100000: (unload-from-pod curator1 art-beta-2 pod1 stasis-lab slot-c1b) [2.00000000]
+Solution with original makespan 58.3 found (ignoring no-moving-targets-rule).
+Plan length: 32 step(s).
+Makespan   : 40.161
+Rescheduled Makespan   : 40.161
+Search time: 0.09 seconds - Walltime: 0.0910459 seconds
+Total time: 0.09 seconds - Walltime: 0.0942359 seconds
+0.00100000: (fly drone1 entrance hall-alpha) [2.00000000]
+2.01100000: (pickup-artifact drone1 art-alpha-1 hall-alpha slot-d1a) [1.00000000]
+3.02100000: (fly drone1 hall-alpha cryo-chamber) [2.00000000]
+5.03100000: (putdown-artifact drone1 art-alpha-1 cryo-chamber slot-d1a) [1.00000000]
+6.04100000: (pickup-artifact drone1 core-sample-1 cryo-chamber slot-d1a) [1.00000000]
+7.05100000: (fly drone1 cryo-chamber stasis-lab) [2.00000000]
+9.06100000: (putdown-artifact drone1 core-sample-1 stasis-lab slot-d1a) [1.00000000]
+10.07100000: (fly-to-beta drone1 stasis-lab hall-beta) [2.00000000]
+12.08100000: (pickup-artifact drone1 art-beta-1 hall-beta slot-d1a) [1.00000000]
+13.09100000: (fly-from-beta drone1 hall-beta stasis-lab) [2.00000000]
+15.10100000: (putdown-artifact drone1 art-beta-1 stasis-lab slot-d1a) [1.00000000]
+0.00100000: (activate-sealing curator1) [1.00000000]
+1.01100000: (move-via-tunnel curator1 entrance tunnel) [3.00000000]
+16.11100000: (fly drone1 stasis-lab cryo-chamber) [2.00000000]
+4.02100000: (move-via-tunnel curator1 tunnel anti-vibration-pods) [3.00000000]
+7.03100000: (pickup-pod curator1 pod1 anti-vibration-pods slot-c1b) [1.00000000]
+8.04100000: (move-via-tunnel curator1 anti-vibration-pods tunnel) [3.00000000]
+11.05100000: (move-via-tunnel curator1 tunnel hall-alpha) [3.00000000]
+14.06100000: (secure-in-pod curator1 art-alpha-2 pod1 hall-alpha slot-c1b) [2.00000000]
+16.07100000: (cool-in-pod curator1 art-alpha-2 pod1 slot-c1b) [3.00000000]
+16.08100000: (move-via-tunnel curator1 hall-alpha tunnel) [3.00000000]
+18.12100000: (pickup-artifact drone1 art-alpha-1 cryo-chamber slot-d1a) [1.00000000]
+19.13100000: (cool drone1 art-alpha-1 slot-d1a) [3.00000000]
+22.14100000: (putdown-artifact drone1 art-alpha-1 cryo-chamber slot-d1a) [1.00000000]
+19.09100000: (move-via-tunnel curator1 tunnel cryo-chamber) [3.00000000]
+22.10100000: (unload-from-pod curator1 art-alpha-2 pod1 cryo-chamber slot-c1b) [2.00000000]
+24.11100000: (move-via-tunnel curator1 cryo-chamber tunnel) [3.00000000]
+27.12100000: (move-via-tunnel-to-beta curator1 tunnel hall-beta) [3.00000000]
+30.13100000: (secure-in-pod curator1 art-beta-2 pod1 hall-beta slot-c1b) [2.00000000]
+32.14100000: (move-via-tunnel-to-beta curator1 hall-beta tunnel) [3.00000000]
+35.15100000: (move-via-tunnel curator1 tunnel stasis-lab) [3.00000000]
+38.16100000: (unload-from-pod curator1 art-beta-2 pod1 stasis-lab slot-c1b) [2.00000000]

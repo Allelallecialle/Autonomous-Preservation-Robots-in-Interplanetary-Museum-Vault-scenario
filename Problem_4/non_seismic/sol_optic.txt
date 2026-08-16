@@ -1,0 +1,93 @@
+----------- Non-Seismic domain OPTIC solution --------------
+
+Number of literals: 93
+Constructing lookup tables: [10%] [20%] [30%] [40%] [50%] [60%] [70%] [80%] [90%] [100%]
+Post filtering unreachable actions:  [10%] [20%] [30%] [40%] [50%] [60%] [70%] [80%] [90%] [100%]
+No semaphore facts found, returning
+Seeing if metric is defined in terms of task vars or a minimal value of makespan
+- Yes it is
+Recognised a monotonic-change-induced limit on -1.000*<special>
+- Must be >=  the metric
+For limits: literal goal index 0, fact (at art-beta-1 stasis-lab), is static or a precondition
+Looking for achievers for goal index 1, fact (stabilized art-beta-2) with fID 75
+ (secure-in-pod curator1 art-beta-2 pod1 anti-vibration-pods slot-c1a) (secure-in-pod curator1 art-beta-2 pod2 anti-vibration-pods slot-c1a) (secure-in-pod curator1 art-beta-2 pod1 cryo-chamber slot-c1a) (secure-in-pod curator1 art-beta-2 pod2 cryo-chamber slot-c1a) (secure-in-pod curator1 art-beta-2 pod1 entrance slot-c1a) (secure-in-pod curator1 art-beta-2 pod2 entrance slot-c1a) (secure-in-pod curator1 art-beta-2 pod1 hall-alpha slot-c1a) (secure-in-pod curator1 art-beta-2 pod2 hall-alpha slot-c1a) (secure-in-pod curator1 art-beta-2 pod1 hall-beta slot-c1a) (secure-in-pod curator1 art-beta-2 pod2 hall-beta slot-c1a) (secure-in-pod curator1 art-beta-2 pod1 stasis-lab slot-c1a) (secure-in-pod curator1 art-beta-2 pod2 stasis-lab slot-c1a) (secure-in-pod curator1 art-beta-2 pod1 tunnel slot-c1a) (secure-in-pod curator1 art-beta-2 pod2 tunnel slot-c1a) (secure-in-pod curator1 art-beta-2 pod1 anti-vibration-pods slot-c1b) (secure-in-pod curator1 art-beta-2 pod2 anti-vibration-pods slot-c1b) (secure-in-pod curator1 art-beta-2 pod1 cryo-chamber slot-c1b) (secure-in-pod curator1 art-beta-2 pod2 cryo-chamber slot-c1b) (secure-in-pod curator1 art-beta-2 pod1 entrance slot-c1b) (secure-in-pod curator1 art-beta-2 pod2 entrance slot-c1b) (secure-in-pod curator1 art-beta-2 pod1 hall-alpha slot-c1b) (secure-in-pod curator1 art-beta-2 pod2 hall-alpha slot-c1b) (secure-in-pod curator1 art-beta-2 pod1 hall-beta slot-c1b) (secure-in-pod curator1 art-beta-2 pod2 hall-beta slot-c1b) (secure-in-pod curator1 art-beta-2 pod1 stasis-lab slot-c1b) (secure-in-pod curator1 art-beta-2 pod2 stasis-lab slot-c1b) (secure-in-pod curator1 art-beta-2 pod1 tunnel slot-c1b) (secure-in-pod curator1 art-beta-2 pod2 tunnel slot-c1b)
+For limits: literal goal index 1, fact (stabilized art-beta-2), could be achieved by operator (secure-in-pod curator1 art-beta-2 pod1 anti-vibration-pods slot-c1a), which has other interesting effects (including one on (in-pod art-beta-2 pod1) )
+For limits: literal goal index 2, fact (at art-beta-2 stasis-lab), is static or a precondition
+Looking for achievers for goal index 3, fact (cooled art-alpha-1) with fID 91
+ (cool curator1 art-alpha-1 slot-c1a) (cool curator1 art-alpha-1 slot-c1b) (cool drone1 art-alpha-1 slot-d1a)
+  Looking at numeric effects of (cool curator1 art-alpha-1 slot-c1a): 0 and 0
+  No troublesome numerics - looking at conditional effects on (cool curator1 art-alpha-1 slot-c1a), of which there are 0
+  Looking at numeric effects of (cool curator1 art-alpha-1 slot-c1b): 0 and 0
+  No troublesome numerics - looking at conditional effects on (cool curator1 art-alpha-1 slot-c1b), of which there are 0
+  Looking at numeric effects of (cool drone1 art-alpha-1 slot-d1a): 0 and 0
+  No troublesome numerics - looking at conditional effects on (cool drone1 art-alpha-1 slot-d1a), of which there are 0
+For limits: literal goal index 4, fact (at art-alpha-1 cryo-chamber), is static or a precondition
+Looking for achievers for goal index 5, fact (stabilized art-alpha-2) with fID 73
+ (secure-in-pod curator1 art-alpha-2 pod1 anti-vibration-pods slot-c1a) (secure-in-pod curator1 art-alpha-2 pod2 anti-vibration-pods slot-c1a) (secure-in-pod curator1 art-alpha-2 pod1 cryo-chamber slot-c1a) (secure-in-pod curator1 art-alpha-2 pod2 cryo-chamber slot-c1a) (secure-in-pod curator1 art-alpha-2 pod1 entrance slot-c1a) (secure-in-pod curator1 art-alpha-2 pod2 entrance slot-c1a) (secure-in-pod curator1 art-alpha-2 pod1 hall-alpha slot-c1a) (secure-in-pod curator1 art-alpha-2 pod2 hall-alpha slot-c1a) (secure-in-pod curator1 art-alpha-2 pod1 hall-beta slot-c1a) (secure-in-pod curator1 art-alpha-2 pod2 hall-beta slot-c1a) (secure-in-pod curator1 art-alpha-2 pod1 stasis-lab slot-c1a) (secure-in-pod curator1 art-alpha-2 pod2 stasis-lab slot-c1a) (secure-in-pod curator1 art-alpha-2 pod1 tunnel slot-c1a) (secure-in-pod curator1 art-alpha-2 pod2 tunnel slot-c1a) (secure-in-pod curator1 art-alpha-2 pod1 anti-vibration-pods slot-c1b) (secure-in-pod curator1 art-alpha-2 pod2 anti-vibration-pods slot-c1b) (secure-in-pod curator1 art-alpha-2 pod1 cryo-chamber slot-c1b) (secure-in-pod curator1 art-alpha-2 pod2 cryo-chamber slot-c1b) (secure-in-pod curator1 art-alpha-2 pod1 entrance slot-c1b) (secure-in-pod curator1 art-alpha-2 pod2 entrance slot-c1b) (secure-in-pod curator1 art-alpha-2 pod1 hall-alpha slot-c1b) (secure-in-pod curator1 art-alpha-2 pod2 hall-alpha slot-c1b) (secure-in-pod curator1 art-alpha-2 pod1 hall-beta slot-c1b) (secure-in-pod curator1 art-alpha-2 pod2 hall-beta slot-c1b) (secure-in-pod curator1 art-alpha-2 pod1 stasis-lab slot-c1b) (secure-in-pod curator1 art-alpha-2 pod2 stasis-lab slot-c1b) (secure-in-pod curator1 art-alpha-2 pod1 tunnel slot-c1b) (secure-in-pod curator1 art-alpha-2 pod2 tunnel slot-c1b)
+For limits: literal goal index 5, fact (stabilized art-alpha-2), could be achieved by operator (secure-in-pod curator1 art-alpha-2 pod1 anti-vibration-pods slot-c1a), which has other interesting effects (including one on (in-pod art-alpha-2 pod1) )
+Looking for achievers for goal index 6, fact (cooled art-alpha-2) with fID 92
+ (cool-in-pod curator1 art-alpha-2 pod1 slot-c1a) (cool-in-pod curator1 art-alpha-2 pod2 slot-c1a) (cool-in-pod curator1 art-alpha-2 pod1 slot-c1b) (cool-in-pod curator1 art-alpha-2 pod2 slot-c1b)
+  Looking at numeric effects of (cool-in-pod curator1 art-alpha-2 pod1 slot-c1a): 0 and 0
+  No troublesome numerics - looking at conditional effects on (cool-in-pod curator1 art-alpha-2 pod1 slot-c1a), of which there are 0
+  Looking at numeric effects of (cool-in-pod curator1 art-alpha-2 pod2 slot-c1a): 0 and 0
+  No troublesome numerics - looking at conditional effects on (cool-in-pod curator1 art-alpha-2 pod2 slot-c1a), of which there are 0
+  Looking at numeric effects of (cool-in-pod curator1 art-alpha-2 pod1 slot-c1b): 0 and 0
+  No troublesome numerics - looking at conditional effects on (cool-in-pod curator1 art-alpha-2 pod1 slot-c1b), of which there are 0
+  Looking at numeric effects of (cool-in-pod curator1 art-alpha-2 pod2 slot-c1b): 0 and 0
+  No troublesome numerics - looking at conditional effects on (cool-in-pod curator1 art-alpha-2 pod2 slot-c1b), of which there are 0
+For limits: literal goal index 7, fact (at art-alpha-2 cryo-chamber), is static or a precondition
+For limits: literal goal index 8, fact (at core-sample-1 stasis-lab), is static or a precondition
+Action 372 - (cool curator1 art-alpha-1 slot-c1a) is uninteresting once we have fact (cooled art-alpha-1)
+Action 373 - (cool curator1 art-alpha-1 slot-c1b) is uninteresting once we have fact (cooled art-alpha-1)
+Action 374 - (cool drone1 art-alpha-1 slot-d1a) is uninteresting once we have fact (cooled art-alpha-1)
+Action 375 - (cool-in-pod curator1 art-alpha-2 pod1 slot-c1a) is uninteresting once we have fact (cooled art-alpha-2)
+Action 376 - (cool-in-pod curator1 art-alpha-2 pod2 slot-c1a) is uninteresting once we have fact (cooled art-alpha-2)
+Action 377 - (cool-in-pod curator1 art-alpha-2 pod1 slot-c1b) is uninteresting once we have fact (cooled art-alpha-2)
+Action 378 - (cool-in-pod curator1 art-alpha-2 pod2 slot-c1b) is uninteresting once we have fact (cooled art-alpha-2)
+All the ground actions in this problem are compression-safe
+Initial heuristic = 24.000, admissible cost estimate 13.006
+b (23.000 | 2.000)b (22.000 | 2.000)b (21.000 | 4.001)b (19.000 | 5.000)b (18.000 | 6.000)b (16.000 | 8.000)b (15.000 | 11.001)b (14.000 | 11.003)b (13.000 | 12.001)b (12.000 | 13.001)b (11.000 | 14.001)b (10.000 | 16.001)b (9.000 | 17.002)b (8.000 | 17.002)b (7.000 | 19.003)b (6.000 | 24.005)b (5.000 | 27.005)b (4.000 | 32.006)b (3.000 | 35.006)b (2.000 | 35.006)b (1.000 | 38.007)(G)
+; LP calculated the cost
+
+; Plan found with metric 40.007
+; Theoretical reachable cost 40.009
+; States evaluated so far: 109
+; States pruned based on pre-heuristic cost lower bound: 0
+; Time 0.17
+0.000: (fly-to-beta drone1 entrance hall-beta)  [2.000]
+0.000: (activate-sealing curator1)  [1.000]
+1.001: (move-via-tunnel curator1 entrance tunnel)  [3.000]
+2.001: (pickup-artifact drone1 art-beta-1 hall-beta slot-d1a)  [1.000]
+3.001: (fly-from-beta drone1 hall-beta stasis-lab)  [2.000]
+4.002: (move-via-tunnel curator1 tunnel anti-vibration-pods)  [3.000]
+5.001: (putdown-artifact drone1 art-beta-1 stasis-lab slot-d1a)  [1.000]
+6.001: (fly drone1 stasis-lab hall-alpha)  [2.000]
+7.003: (pickup-pod curator1 pod1 anti-vibration-pods slot-c1a)  [1.000]
+8.001: (pickup-artifact drone1 art-alpha-1 hall-alpha slot-d1a)  [1.000]
+8.003: (move-via-tunnel curator1 anti-vibration-pods tunnel)  [3.000]
+9.001: (fly drone1 hall-alpha cryo-chamber)  [2.000]
+9.001: (cool drone1 art-alpha-1 slot-d1a)  [3.000]
+11.004: (move-via-tunnel-to-beta curator1 tunnel hall-beta)  [3.000]
+12.001: (putdown-artifact drone1 art-alpha-1 cryo-chamber slot-d1a)  [1.000]
+13.002: (pickup-artifact drone1 core-sample-1 cryo-chamber slot-d1a)  [1.000]
+14.002: (fly drone1 cryo-chamber stasis-lab)  [2.000]
+14.004: (secure-in-pod curator1 art-beta-2 pod1 hall-beta slot-c1a)  [2.000]
+16.002: (putdown-artifact drone1 core-sample-1 stasis-lab slot-d1a)  [1.000]
+16.004: (move-via-tunnel-to-beta curator1 hall-beta tunnel)  [3.000]
+19.005: (move-via-tunnel curator1 tunnel stasis-lab)  [3.000]
+22.005: (unload-from-pod curator1 art-beta-2 pod1 stasis-lab slot-c1a)  [2.000]
+24.005: (move-via-tunnel curator1 stasis-lab tunnel)  [3.000]
+27.006: (move-via-tunnel curator1 tunnel hall-alpha)  [3.000]
+30.006: (secure-in-pod curator1 art-alpha-2 pod1 hall-alpha slot-c1a)  [2.000]
+32.006: (move-via-tunnel curator1 hall-alpha tunnel)  [3.000]
+32.006: (cool-in-pod curator1 art-alpha-2 pod1 slot-c1a)  [3.000]
+35.007: (move-via-tunnel curator1 tunnel cryo-chamber)  [3.000]
+38.007: (unload-from-pod curator1 art-alpha-2 pod1 cryo-chamber slot-c1a)  [2.000]
+
+ * All goal deadlines now no later than 40.007
+Resorting to best-first search
+Running WA* with W = 5.000, not restarting with goal states
+b (23.000 | 2.000)b (23.000 | 1.000)b (22.000 | 2.000)b (21.000 | 4.001)b (20.000 | 5.000)b (19.000 | 6.000)b 
+(18.000 | 7.002)002)b (16.000 | 8.000)b (15.000 | 11.001)b (14.000 | 12.001)b (13.000 | 12.001)b (12.000 | 13.004)b 
+(11.000 | 15.004)b (10.000.000 | 25.005)b (8.000 | 30.006)b (7.000 | 33.006)b (7.000 | 22.005)b (6.000 | 24.005)b 
+(5.000 | 27.005)b (4.000 | 32.006)b (3b (3.000 | 32.006)Killed
