@@ -1,0 +1,85 @@
+root@ce737e11789f:/computer/Final_project/Autonomous-Preservation-Robots-in-Interplanetary-Museum-Vault-scenario/Proble
+m_5/plansys2_imv# ros2 run plansys2_terminal plansys2_terminal --ros-args -p problem_file:=$(pwd)/pddl/problem.pddl
+2026-09-06 13:48:28.182 [XMLPARSER Error] getcwd failed No such file or directory -> Function loadDefaultXMLFile
+[INFO] [1788702509.557898647] [terminal]: Adding problem file to problem_expert: /computer/Final_project/Autonomous-Preservation-Robots-in-Interplanetary-Museum-Vault-scenario/Problem_5/plansys2_imv/pddl/problem.pddl
+ROS2 Planning System console. Type "quit" to finish
+> get plan
+plan: 
+0:      (activate_sealing curator1)     [1]
+0:      (fly drone1 entrance anti-vibration-pods)       [2]
+1.001:  (move_via_tunnel curator1 entrance tunnel)      [3]
+2.001:  (fly drone1 anti-vibration-pods hall-alpha)     [2]
+4.002:  (fly drone1 hall-alpha stasis-lab)      [2]
+4.002:  (move_via_tunnel curator1 tunnel anti-vibration-pods)   [3]
+6.003:  (fly drone1 stasis-lab cryo-chamber)    [2]
+7.003:  (pickup_pod curator1 pod1 anti-vibration-pods slot-c1a) [1]
+8.003:  (pickup_artifact drone1 core-sample-1 cryo-chamber slot-d1a)    [1]
+8.003:  (move_via_tunnel curator1 anti-vibration-pods tunnel)   [3]
+9.003:  (fly drone1 cryo-chamber stasis-lab)    [2]
+11.003: (putdown_artifact drone1 core-sample-1 stasis-lab slot-d1a)     [1]
+11.004: (move_via_tunnel curator1 tunnel hall-alpha)    [3]
+12.003: (fly drone1 stasis-lab hall-alpha)      [2]
+14.003: (pickup_artifact drone1 art-alpha-1 hall-alpha slot-d1a)        [1]
+14.004: (secure_in_pod curator1 art-alpha-2 pod1 hall-alpha slot-c1a)   [2]
+15.003: (cool drone1 art-alpha-1 slot-d1a hall-alpha)   [3]
+16.004: (cool_in_pod curator1 art-alpha-2 pod1 slot-c1a hall-alpha)     [3]
+18.003: (fly drone1 hall-alpha cryo-chamber)    [2]
+19.004: (move_via_tunnel curator1 hall-alpha tunnel)    [3]
+20.003: (putdown_artifact drone1 art-alpha-1 cryo-chamber slot-d1a)     [1]
+21.003: (fly drone1 cryo-chamber stasis-lab)    [2]
+22.005: (move_via_tunnel curator1 tunnel cryo-chamber)  [3]
+23.004: (fly_to_beta drone1 stasis-lab hall-beta)       [2]
+25.004: (pickup_artifact drone1 art-beta-1 hall-beta slot-d1a)  [1]
+25.005: (unload_from_pod curator1 art-alpha-2 pod1 cryo-chamber slot-c1a)       [2]
+26.004: (fly_from_beta drone1 hall-beta stasis-lab)     [2]
+27.005: (move_via_tunnel curator1 cryo-chamber tunnel)  [3]
+28.004: (putdown_artifact drone1 art-beta-1 stasis-lab slot-d1a)        [1]
+30.006: (move_via_tunnel_to_beta curator1 tunnel hall-beta)     [3]
+33.006: (secure_in_pod curator1 art-beta-2 pod1 hall-beta slot-c1a)     [2]
+35.006: (move_via_tunnel_to_beta curator1 hall-beta tunnel)     [3]
+38.007: (move_via_tunnel curator1 tunnel stasis-lab)    [3]
+41.007: (unload_from_pod curator1 art-beta-2 pod1 stasis-lab slot-c1a)  [2]
+> run
+[(move_via_tunnel curator1 anti-vibration-pods tunnel) 13.3333%][(pickup_artifact drone1 core-sample-1 cryo-chamber slo
+[(move_via_tunnel curator1 anti-vibration-pods tunnel) 20%][(pickup_artifact drone1 core-sample-1 cryo-chamber slot-d1a
+[(move_via_tunnel curator1 anti-vibration-pods tunnel) 26.6667%][(pickup_artifact drone1 core-sample-1 cryo-chamber slo
+[(move_via_tunnel curator1 anti-vibration-pods tunnel) 33.3333%][(pickup_artifact drone1 core-sample-1 cryo-chamber slo
+[(move_via_tunnel curator1 anti-vibration-pods tunnel) 40%][(pickup_artifact drone1 core-sample-1 cryo-chamber slot-d1a
+[(move_via_tunnel curator1 anti-vibration-pods tunnel) 46.6667%][(pickup_artifact drone1 core-sample-1 cryo-chamber slo
+[(move_via_tunnel curator1 tunnel hall-alpha) 33.3333%][(putdown_artifact drone1 core-sample-1 stasis-lab slot-d1a) 20%
+[(move_via_tunnel curator1 tunnel hall-alpha) 46.6667%][(putdown_artifact drone1 core-sample-1 stasis-lab slot-d1a) 60%
+[(move_via_tunnel curator1 tunnel hall-alpha) 53.3333%][(putdown_artifact drone1 core-sample-1 stasis-lab slot-d1a) 80%
+[(pickup_artifact drone1 art-alpha-1 hall-alpha slot-d1a) 0%][(secure_in_pod curator1 art-alpha-2 pod1 hall-alpha slot-
+[(pickup_artifact drone1 art-alpha-1 hall-alpha slot-d1a) 20%][(secure_in_pod curator1 art-alpha-2 pod1 hall-alpha slot
+[(pickup_artifact drone1 art-alpha-1 hall-alpha slot-d1a) 40%][(secure_in_pod curator1 art-alpha-2 pod1 hall-alpha slot
+[(pickup_artifact drone1 art-alpha-1 hall-alpha slot-d1a) 60%][(secure_in_pod curator1 art-alpha-2 pod1 hall-alpha slot
+[(pickup_artifact drone1 art-alpha-1 hall-alpha slot-d1a) 80%][(secure_in_pod curator1 art-alpha-2 pod1 hall-alpha slot
+[(pickup_artifact drone1 art-alpha-1 hall-alpha slot-d1a) 100%][(secure_in_pod curator1 art-alpha-2 pod1 hall-alpha slo
+[(cool drone1 art-alpha-1 slot-d1a hall-alpha) 6.66667%][(cool_in_pod curator1 art-alpha-2 pod1 slot-c1a hall-alpha) 0%
+[(cool drone1 art-alpha-1 slot-d1a hall-alpha) 13.3333%][(cool_in_pod curator1 art-alpha-2 pod1 slot-c1a hall-alpha) 6.
+[(cool drone1 art-alpha-1 slot-d1a hall-alpha) 20%][(cool_in_pod curator1 art-alpha-2 pod1 slot-c1a hall-alpha) 13.3333
+[(cool drone1 art-alpha-1 slot-d1a hall-alpha) 26.6667%][(cool_in_pod curator1 art-alpha-2 pod1 slot-c1a hall-alpha) 20
+[(cool drone1 art-alpha-1 slot-d1a hall-alpha) 33.3333%][(cool_in_pod curator1 art-alpha-2 pod1 slot-c1a hall-alpha) 26
+[(cool drone1 art-alpha-1 slot-d1a hall-alpha) 40%][(cool_in_pod curator1 art-alpha-2 pod1 slot-c1a hall-alpha) 33.3333
+[(cool drone1 art-alpha-1 slot-d1a hall-alpha) 46.6667%][(cool_in_pod curator1 art-alpha-2 pod1 slot-c1a hall-alpha) 40
+[(cool drone1 art-alpha-1 slot-d1a hall-alpha) 53.3333%][(cool_in_pod curator1 art-alpha-2 pod1 slot-c1a hall-alpha) 46
+[(cool drone1 art-alpha-1 slot-d1a hall-alpha) 60%][(cool_in_pod curator1 art-alpha-2 pod1 slot-c1a hall-alpha) 53.3333
+[(cool drone1 art-alpha-1 slot-d1a hall-alpha) 66.6667%][(cool_in_pod curator1 art-alpha-2 pod1 slot-c1a hall-alpha) 60
+[(cool drone1 art-alpha-1 slot-d1a hall-alpha) 73.3333%][(cool_in_pod curator1 art-alpha-2 pod1 slot-c1a hall-alpha) 66
+[(cool drone1 art-alpha-1 slot-d1a hall-alpha) 80%][(cool_in_pod curator1 art-alpha-2 pod1 slot-c1a hall-alpha) 73.3333
+[(cool drone1 art-alpha-1 slot-d1a hall-alpha) 86.6667%][(cool_in_pod curator1 art-alpha-2 pod1 slot-c1a hall-alpha) 80
+[(cool drone1 art-alpha-1 slot-d1a hall-alpha) 93.3333%][(cool_in_pod curator1 art-alpha-2 pod1 slot-c1a hall-alpha) 86
+[(cool drone1 art-alpha-1 slot-d1a hall-alpha) 100%][(cool_in_pod curator1 art-alpha-2 pod1 slot-c1a hall-alpha) 93.333
+[(move_via_tunnel curator1 hall-alpha tunnel) 86.6667%][(putdown_artifact drone1 art-alpha-1 cryo-chamber slot-d1a) 40%
+[(move_via_tunnel curator1 hall-alpha tunnel) 93.3333%][(putdown_artifact drone1 art-alpha-1 cryo-chamber slot-d1a) 60%
+[(pickup_artifact drone1 art-beta-1 hall-beta slot-d1a) 0%][(unload_from_pod curator1 art-alpha-2 pod1 cryo-chamber slo
+[(pickup_artifact drone1 art-beta-1 hall-beta slot-d1a) 20%][(unload_from_pod curator1 art-alpha-2 pod1 cryo-chamber sl
+[(pickup_artifact drone1 art-beta-1 hall-beta slot-d1a) 40%][(unload_from_pod curator1 art-alpha-2 pod1 cryo-chamber sl
+[(pickup_artifact drone1 art-beta-1 hall-beta slot-d1a) 60%][(unload_from_pod curator1 art-alpha-2 pod1 cryo-chamber sl
+[(move_via_tunnel_to_beta curator1 tunnel hall-beta) 6.66667%][(putdown_artifact drone1 art-beta-1 stasis-lab slot-d1a)
+[(move_via_tunnel_to_beta curator1 tunnel hall-beta) 13.3333%][(putdown_artifact drone1 art-beta-1 stasis-lab slot-d1a)
+[INFO] [1788702586.642770256] [executor_client]: Plan Succeeded
+
+Successful finished 
+> quit
+Finishing...

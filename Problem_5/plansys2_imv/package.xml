@@ -6,8 +6,8 @@
   <description>
     Interplanetary Museum Vault (IMV) scenario deployed in PlanSys2
   </description>
-  <maintainer email="student@example.com"></maintainer>
-  <license>Apache-2.0</license>
+  <maintainer email="root@todo.todo">root</maintainer>
+  <license>TODO: License declaration</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 

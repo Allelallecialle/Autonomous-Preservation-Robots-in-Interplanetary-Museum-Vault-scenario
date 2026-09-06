@@ -1,0 +1,297 @@
+root@ce737e11789f:/computer/Final_project/Autonomous-Preservation-Robots-in-Interplanetary-Museum-Vault-scenario/Proble
+m_5/plansys2_imv# ros2 launch plansys2_imv plansys2_imv_launch.py
+[INFO] [launch]: All log files can be found below /root/.ros/log/2026-09-06-13-48-06-978000-ce737e11789f-52760
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [plansys2_node-1]: process started with pid [52761]
+[INFO] [move_via_tunnel_node-2]: process started with pid [52763]
+[INFO] [move_via_tunnel_to_beta_node-3]: process started with pid [52765]
+[INFO] [activate_sealing_node-4]: process started with pid [52767]
+[INFO] [deactivate_sealing_node-5]: process started with pid [52769]
+[INFO] [fly_node-6]: process started with pid [52771]
+[INFO] [fly_to_beta_node-7]: process started with pid [52773]
+[INFO] [fly_from_beta_node-8]: process started with pid [52775]
+[INFO] [pickup_pod_node-9]: process started with pid [52777]
+[INFO] [putdown_pod_node-10]: process started with pid [52779]
+[INFO] [pickup_artifact_node-11]: process started with pid [52781]
+[INFO] [putdown_artifact_node-12]: process started with pid [52783]
+[INFO] [secure_in_pod_node-13]: process started with pid [52785]
+[INFO] [unload_from_pod_node-14]: process started with pid [52787]
+[INFO] [cool_node-15]: process started with pid [52789]
+[INFO] [cool_in_pod_node-16]: process started with pid [52791]
+[plansys2_node-1] [INFO] [1788702487.203761002] [domain_expert_lc_mngr]: Creating client for service [domain_expert/get_state]
+[plansys2_node-1] [INFO] [1788702487.203929436] [domain_expert_lc_mngr]: Creating client for service [domain_expert/change_state]
+[plansys2_node-1] [INFO] [1788702487.205583008] [executor_lc_mngr]: Creating client for service [executor/get_state]
+[plansys2_node-1] [INFO] [1788702487.205613605] [executor_lc_mngr]: Creating client for service [executor/change_state]
+[plansys2_node-1] [INFO] [1788702487.206990976] [planner_lc_mngr]: Creating client for service [planner/get_state]
+[plansys2_node-1] [INFO] [1788702487.207021697] [planner_lc_mngr]: Creating client for service [planner/change_state]
+[plansys2_node-1] [INFO] [1788702487.208349683] [problem_expert_lc_mngr]: Creating client for service [problem_expert/get_state]
+[plansys2_node-1] [INFO] [1788702487.208378780] [problem_expert_lc_mngr]: Creating client for service [problem_expert/change_state]
+[plansys2_node-1] [INFO] [1788702487.211046386] [domain_expert]: [domain_expert] Configuring...
+[plansys2_node-1] [INFO] [1788702487.369353894] [domain_expert]: [domain_expert] Configured
+[plansys2_node-1] [INFO] [1788702487.370295991] [domain_expert_lc_mngr]: Transition 1 successfully triggered.
+[plansys2_node-1] [INFO] [1788702487.371051363] [domain_expert_lc_mngr]: Node domain_expert_lc_mngr has current state inactive.
+[plansys2_node-1] [INFO] [1788702487.371296366] [problem_expert]: [problem_expert] Configuring...
+[plansys2_node-1] [INFO] [1788702487.372164038] [problem_expert]: [problem_expert] Configured
+[plansys2_node-1] [INFO] [1788702487.372450986] [problem_expert_lc_mngr]: Transition 1 successfully triggered.
+[plansys2_node-1] [INFO] [1788702487.372955943] [problem_expert_lc_mngr]: Node problem_expert_lc_mngr has current state inactive.
+[plansys2_node-1] [INFO] [1788702487.373140665] [planner]: [planner] Configuring...
+[plansys2_node-1] [INFO] [1788702487.374172285] [planner]: Created solver : POPF of type plansys2/POPFPlanSolver
+[plansys2_node-1] [INFO] [1788702487.374243995] [planner]: [planner] Configured
+[plansys2_node-1] [INFO] [1788702487.374551065] [planner_lc_mngr]: Transition 1 successfully triggered.
+[plansys2_node-1] [INFO] [1788702487.375006300] [planner_lc_mngr]: Node planner_lc_mngr has current state inactive.
+[plansys2_node-1] [INFO] [1788702487.375174775] [executor]: [executor] Configuring...
+[plansys2_node-1] [INFO] [1788702487.450419299] [executor]: [executor] Configured
+[plansys2_node-1] [INFO] [1788702487.450985447] [executor_lc_mngr]: Transition 1 successfully triggered.
+[plansys2_node-1] [INFO] [1788702487.451437431] [executor_lc_mngr]: Node executor_lc_mngr has current state inactive.
+[plansys2_node-1] [INFO] [1788702487.451651930] [domain_expert]: [domain_expert] Activating...
+[plansys2_node-1] [INFO] [1788702487.451672781] [domain_expert]: [domain_expert] Activated
+[plansys2_node-1] [INFO] [1788702487.451824986] [domain_expert_lc_mngr]: Transition 3 successfully triggered.
+[plansys2_node-1] [INFO] [1788702487.452047381] [problem_expert]: [problem_expert] Activating...
+[plansys2_node-1] [INFO] [1788702487.452068315] [problem_expert]: [problem_expert] Activated
+[plansys2_node-1] [INFO] [1788702487.452213932] [problem_expert_lc_mngr]: Transition 3 successfully triggered.
+[plansys2_node-1] [INFO] [1788702487.452358250] [planner]: [planner] Activating...
+[plansys2_node-1] [INFO] [1788702487.452372493] [planner]: [planner] Activated
+[plansys2_node-1] [INFO] [1788702487.452517805] [planner_lc_mngr]: Transition 3 successfully triggered.
+[plansys2_node-1] [INFO] [1788702487.452652029] [executor]: [executor] Activating...
+[plansys2_node-1] [INFO] [1788702487.452665931] [executor]: [executor] Activated
+[plansys2_node-1] [INFO] [1788702487.452809540] [executor_lc_mngr]: Transition 3 successfully triggered.
+[plansys2_node-1] [INFO] [1788702487.453029788] [domain_expert_lc_mngr]: Node domain_expert_lc_mngr has current state active.
+[plansys2_node-1] [INFO] [1788702487.453246514] [problem_expert_lc_mngr]: Node problem_expert_lc_mngr has current state active.
+[plansys2_node-1] [INFO] [1788702487.453439673] [planner_lc_mngr]: Node planner_lc_mngr has current state active.
+[plansys2_node-1] [INFO] [1788702487.453618388] [executor_lc_mngr]: Node executor_lc_mngr has current state active.
+[plansys2_node-1] [INFO] [1788702510.278718600] [problem_expert]: Adding problem:
+[plansys2_node-1] (define (problem imv-plansys2)
+[plansys2_node-1]   (:domain imv-transport-plansys2)
+[plansys2_node-1] 
+[plansys2_node-1]   (:objects
+[plansys2_node-1]     curator1 drone1 - robot
+[plansys2_node-1]     slot-c1a slot-c1b slot-d1a - slot
+[plansys2_node-1]     pod1 pod2 - pod
+[plansys2_node-1]     art-beta-1 art-beta-2 art-alpha-1 art-alpha-2 core-sample-1 - artifact
+[plansys2_node-1]     entrance tunnel anti-vibration-pods hall-alpha hall-beta cryo-chamber stasis-lab - location
+[plansys2_node-1]   )
+
+...
+
+[plansys2_node-1] Problem:
+[plansys2_node-1] (define (problem imv-plansys2)
+[plansys2_node-1]   (:domain imv-transport-plansys2)
+[plansys2_node-1] 
+[plansys2_node-1]   (:objects
+[plansys2_node-1]     curator1 drone1 - robot
+[plansys2_node-1]     slot-c1a slot-c1b slot-d1a - slot
+[plansys2_node-1]     pod1 pod2 - pod
+[plansys2_node-1]     art-beta-1 art-beta-2 art-alpha-1 art-alpha-2 core-sample-1 - artifact
+[plansys2_node-1]     entrance tunnel anti-vibration-pods hall-alpha hall-beta cryo-chamber stasis-lab - location
+[plansys2_node-1]   )
+[plansys2_node-1] 
+[plansys2_node-1]   (:init
+[plansys2_node-1]     (robot-at curator1 entrance)
+[plansys2_node-1]     (robot-at drone1 entrance)
+[plansys2_node-1]     (unsealed curator1)
+[plansys2_node-1]     (unsealed drone1)
+[plansys2_node-1] 
+[plansys2_node-1]     (slot-of slot-c1a curator1)
+[plansys2_node-1]     (slot-of slot-c1b curator1)
+[plansys2_node-1]     (slot-free slot-c1a)
+[plansys2_node-1]     (slot-free slot-c1b)
+[plansys2_node-1] 
+
+...
+
+[plansys2_node-1] Adding instance: art-beta-1 artifact
+[plansys2_node-1] Adding instance: art-beta-2 artifact
+[plansys2_node-1] Adding instance: art-alpha-1 artifact
+[plansys2_node-1] Adding instance: art-alpha-2 artifact
+[plansys2_node-1] Adding instance: core-sample-1 artifact
+[plansys2_node-1] Adding instance: pod1 pod
+[plansys2_node-1] Adding instance: pod2 pod
+[plansys2_node-1] Adding instance: curator1 robot
+[plansys2_node-1] Adding instance: drone1 robot
+[plansys2_node-1] Adding instance: entrance location
+[plansys2_node-1] Adding instance: tunnel location
+[plansys2_node-1] Adding instance: anti-vibration-pods location
+[plansys2_node-1] Adding instance: hall-alpha location
+[plansys2_node-1] Adding instance: hall-beta location
+[plansys2_node-1] Adding instance: cryo-chamber location
+[plansys2_node-1] Adding instance: stasis-lab location
+[plansys2_node-1] Adding instance: slot-c1a slot
+[plansys2_node-1] Adding instance: slot-c1b slot
+[plansys2_node-1] Adding instance: slot-d1a slot
+[plansys2_node-1] Adding predicate: (robot-at curator1 entrance)
+[plansys2_node-1] Adding predicate: (robot-at drone1 entrance)
+[plansys2_node-1] Adding predicate: (unsealed curator1)
+[plansys2_node-1] Adding predicate: (unsealed drone1)
+[plansys2_node-1] Adding predicate: (slot-of slot-c1a curator1)
+[plansys2_node-1] Adding predicate: (slot-of slot-c1b curator1)
+[plansys2_node-1] Adding predicate: (slot-free slot-c1a)
+[plansys2_node-1] Adding predicate: (slot-free slot-c1b)
+[plansys2_node-1] Adding predicate: (slot-of slot-d1a drone1)
+[plansys2_node-1] Adding predicate: (slot-free slot-d1a)
+[plansys2_node-1] Adding predicate: (can-carry-pod curator1)
+[plansys2_node-1] Adding predicate: (can-fly drone1)
+[plansys2_node-1] Adding predicate: (at-pod pod1 anti-vibration-pods)
+[plansys2_node-1] Adding predicate: (at-pod pod2 anti-vibration-pods)
+[plansys2_node-1] Adding predicate: (at-artifact art-beta-1 hall-beta)
+[plansys2_node-1] Adding predicate: (at-artifact art-beta-2 hall-beta)
+[plansys2_node-1] Adding predicate: (at-artifact art-alpha-1 hall-alpha)
+[plansys2_node-1] Adding predicate: (at-artifact art-alpha-2 hall-alpha)
+[plansys2_node-1] Adding predicate: (at-artifact core-sample-1 cryo-chamber)
+[plansys2_node-1] Adding predicate: (is-fragile art-beta-2)
+[plansys2_node-1] Adding predicate: (is-alpha art-alpha-1)
+[plansys2_node-1] Adding predicate: (is-alpha art-alpha-2)
+[plansys2_node-1] Adding predicate: (is-fragile art-alpha-2)
+[plansys2_node-1] Adding predicate: (is-core-sample core-sample-1)
+[plansys2_node-1] Adding predicate: (not-fragile art-beta-1)
+[plansys2_node-1] Adding predicate: (not-fragile art-alpha-1)
+[plansys2_node-1] Adding predicate: (not-fragile core-sample-1)
+[plansys2_node-1] Adding predicate: (pending-cool art-alpha-1)
+[plansys2_node-1] Adding predicate: (pending-cool art-alpha-2)
+[plansys2_node-1] Adding predicate: (tunnel-connected entrance tunnel)
+[plansys2_node-1] Adding predicate: (tunnel-connected tunnel entrance)
+[plansys2_node-1] Adding predicate: (tunnel-connected anti-vibration-pods tunnel)
+[plansys2_node-1] Adding predicate: (tunnel-connected tunnel anti-vibration-pods)
+[plansys2_node-1] Adding predicate: (tunnel-connected hall-alpha tunnel)
+[plansys2_node-1] Adding predicate: (tunnel-connected tunnel hall-alpha)
+[plansys2_node-1] Adding predicate: (tunnel-connected cryo-chamber tunnel)
+[plansys2_node-1] Adding predicate: (tunnel-connected tunnel cryo-chamber)
+[plansys2_node-1] Adding predicate: (tunnel-connected stasis-lab tunnel)
+[plansys2_node-1] Adding predicate: (tunnel-connected tunnel stasis-lab)
+[plansys2_node-1] Adding predicate: (tunnel-beta-connected hall-beta tunnel)
+[plansys2_node-1] Adding predicate: (tunnel-beta-connected tunnel hall-beta)
+[plansys2_node-1] Adding predicate: (is-hall-beta hall-beta)
+[plansys2_node-1] Adding predicate: (not-hall-beta entrance)
+[plansys2_node-1] Adding predicate: (not-hall-beta tunnel)
+[plansys2_node-1] Adding predicate: (not-hall-beta anti-vibration-pods)
+[plansys2_node-1] Adding predicate: (not-hall-beta hall-alpha)
+[plansys2_node-1] Adding predicate: (not-hall-beta cryo-chamber)
+[plansys2_node-1] Adding predicate: (not-hall-beta stasis-lab)
+[plansys2_node-1] Adding predicate: (seismic-clear)
+[plansys2_node-1] Adding goal node: (at-artifact art-beta-1 stasis-lab)
+[plansys2_node-1] Adding goal node: (stabilized art-beta-2)
+[plansys2_node-1] Adding goal node: (at-artifact art-beta-2 stasis-lab)
+[plansys2_node-1] Adding goal node: (cooled art-alpha-1)
+[plansys2_node-1] Adding goal node: (at-artifact art-alpha-1 cryo-chamber)
+[plansys2_node-1] Adding goal node: (stabilized art-alpha-2)
+[plansys2_node-1] Adding goal node: (cooled art-alpha-2)
+[plansys2_node-1] Adding goal node: (at-artifact art-alpha-2 cryo-chamber)
+[plansys2_node-1] Adding goal node: (at-artifact core-sample-1 stasis-lab)
+[plansys2_node-1] Adding Goal: (and (at-artifact art-beta-1 stasis-lab)(stabilized art-beta-2)(at-artifact art-beta-2 stasis-lab)(cooled art-alpha-1)(at-artifact art-alpha-1 cryo-chamber)(stabilized art-alpha-2)(cooled art-alpha-2)(at-artifact art-alpha-2 cryo-chamber)(at-artifact core-sample-1 stasis-lab))
+[plansys2_node-1] [INFO] [1788702532.859222344] [executor]: Action activate_sealing timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788702532.862204577] [executor]: Action fly timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788702532.865811915] [executor]: Action move_via_tunnel timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788702532.870164845] [executor]: Action fly timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788702532.873700094] [executor]: Action fly timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788702532.877650801] [executor]: Action move_via_tunnel timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788702532.880859929] [executor]: Action fly timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788702532.884649864] [executor]: Action pickup_pod timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788702532.888651049] [executor]: Action pickup_artifact timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788702532.892554456] [executor]: Action move_via_tunnel timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788702532.896025868] [executor]: Action fly timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788702532.899921442] [executor]: Action putdown_artifact timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788702532.903879734] [executor]: Action move_via_tunnel timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788702532.908070669] [executor]: Action fly timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788702532.912061709] [executor]: Action pickup_artifact timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788702532.916940948] [executor]: Action secure_in_pod timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788702532.921126419] [executor]: Action cool timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788702532.924928408] [executor]: Action cool_in_pod timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788702532.928770683] [executor]: Action fly timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788702532.932937269] [executor]: Action move_via_tunnel timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788702532.937882798] [executor]: Action putdown_artifact timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788702532.942045647] [executor]: Action fly timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788702532.946277924] [executor]: Action move_via_tunnel timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788702532.950386878] [executor]: Action fly_to_beta timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788702532.954134767] [executor]: Action pickup_artifact timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788702532.957967981] [executor]: Action unload_from_pod timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788702532.962056476] [executor]: Action fly_from_beta timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788702532.966120833] [executor]: Action move_via_tunnel timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788702532.970575671] [executor]: Action putdown_artifact timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788702532.975025327] [executor]: Action move_via_tunnel_to_beta timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788702532.979547500] [executor]: Action secure_in_pod timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788702532.984498384] [executor]: Action move_via_tunnel_to_beta timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788702532.989770135] [executor]: Action move_via_tunnel timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788702532.994915560] [executor]: Action unload_from_pod timeout percentage -1.000000
+[plansys2_node-1] [WARN] [1788702533.020097433] [rcl.logging_rosout]: Publisher already registered for provided node name. If this is due to multiple nodes with the same name then all logs for that logger name will go out over the existing publisher. As soon as any node with that name is destructed it will unregister the publisher, preventing any further logs for that name from being published on the rosout topic.
+[plansys2_node-1] [WARN] [1788702533.047507960] [rcl.logging_rosout]: Publisher already registered for provided node name. If this is due to multiple nodes with the same name then all logs for that logger name will go out over the existing publisher. As soon as any node with that name is destructed it will unregister the publisher, preventing any further logs for that name from being published on the rosout topic.
+activate_sealing ... [100%]  
+fly ... [100%]  
+move_via_tunnel ... [100%]  
+fly ... [100%]  
+fly ... [100%]  
+move_via_tunnel ... [100%]  
+pickup_pod ... [100%]  
+fly ... [100%]  
+pickup_artifact ... [100%]  
+[plansys2_node-1] [WARN] [1788702544.596152891] [LifecyclePublisher]: Trying to publish message on the topic '/actions_hub', but the publisher is not activated
+move_via_tunnel ... [100%]  
+fly ... [100%]  
+putdown_artifact ... [100%]  
+move_via_tunnel ... [100%]  
+fly ... [100%]  
+pickup_artifact ... [100%]  
+secure_in_pod ... [100%]  
+cool ... [100%]  
+cool_in_pod ... [100%]  
+fly ... [100%]  
+move_via_tunnel ... [100%]  
+putdown_artifact ... [100%]  
+fly ... [100%]  
+move_via_tunnel ... [100%]  
+fly_to_beta ... [100%]  
+unload_from_pod ... [100%]  
+pickup_artifact ... [100%]  
+fly_from_beta ... [100%]  
+move_via_tunnel ... [100%]  
+putdown_artifact ... [100%]  
+move_via_tunnel_to_beta ... [100%]  
+secure_in_pod ... [100%]  
+move_via_tunnel_to_beta ... [100%]  
+move_via_tunnel ... [100%]  
+unload_from_pod ... [100%]  
+[plansys2_node-1] [INFO] [1788702584.488737736] [executor]: Plan Succeeded
+^C[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[plansys2_node-1] [INFO] [1788702799.088299085] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[move_via_tunnel_to_beta_node-3] [INFO] [1788702799.088293821] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[putdown_pod_node-10] [INFO] [1788702799.088293811] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[secure_in_pod_node-13] [INFO] [1788702799.088301518] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[fly_node-6] [INFO] [1788702799.088319360] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[pickup_artifact_node-11] [INFO] [1788702799.088464190] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[unload_from_pod_node-14] [INFO] [1788702799.088459843] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[move_via_tunnel_node-2] [INFO] [1788702799.088453071] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[pickup_pod_node-9] [INFO] [1788702799.088406198] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[cool_in_pod_node-16] [INFO] [1788702799.088485212] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[fly_to_beta_node-7] [INFO] [1788702799.089016089] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[putdown_artifact_node-12] [INFO] [1788702799.089333239] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[cool_node-15] [INFO] [1788702799.089957804] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[deactivate_sealing_node-5] [INFO] [1788702799.090152616] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[activate_sealing_node-4] [INFO] [1788702799.090497696] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[fly_from_beta_node-8] [INFO] [1788702799.090764864] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [unload_from_pod_node-14]: process has finished cleanly [pid 52787]
+unload_from_pod ... [0%]  
+[INFO] [fly_to_beta_node-7]: process has finished cleanly [pid 52773]
+fly_to_beta ... [0%]  
+[INFO] [cool_in_pod_node-16]: process has finished cleanly [pid 52791]
+cool_in_pod ... [0%]  
+[INFO] [pickup_pod_node-9]: process has finished cleanly [pid 52777]
+[INFO] [fly_from_beta_node-8]: process has finished cleanly [pid 52775]
+pickup_pod ... [0%]  
+[INFO] [secure_in_pod_node-13]: process has finished cleanly [pid 52785]
+[INFO] [activate_sealing_node-4]: process has finished cleanly [pid 52767]
+[INFO] [putdown_pod_node-10]: process has finished cleanly [pid 52779]
+fly_from_beta ... [0%]  
+[INFO] [pickup_artifact_node-11]: process has finished cleanly [pid 52781]
+[INFO] [putdown_artifact_node-12]: process has finished cleanly [pid 52783]
+secure_in_pod ... [0%]  
+[INFO] [deactivate_sealing_node-5]: process has finished cleanly [pid 52769]
+activate_sealing ... [0%]  
+pickup_artifact ... [0%]  
+putdown_artifact ... [0%]  
+[INFO] [move_via_tunnel_to_beta_node-3]: process has finished cleanly [pid 52765]
+move_via_tunnel_to_beta ... [0%]  
+[INFO] [cool_node-15]: process has finished cleanly [pid 52789]
+cool ... [0%]  
+[INFO] [fly_node-6]: process has finished cleanly [pid 52771]
+fly ... [0%]  
+[INFO] [move_via_tunnel_node-2]: process has finished cleanly [pid 52763]
+move_via_tunnel ... [0%]  
+[INFO] [plansys2_node-1]: process has finished cleanly [pid 52761]
