@@ -1,0 +1,70 @@
+set instance curator1 robot
+set instance curator1 robot
+set instance drone1 robot
+set instance slot-c1a slot
+set instance slot-c1b slot
+set instance slot-d1a slot
+set instance pod1 pod
+set instance pod2 pod
+set instance art-beta-1 artifact
+set instance art-beta-2 artifact
+set instance art-alpha-1 artifact
+set instance art-alpha-2 artifact
+set instance core-sample-1 artifact
+set instance entrance location
+set instance tunnel location
+set instance anti-vibration-pods location
+set instance hall-alpha location
+set instance hall-beta location
+set instance cryo-chamber location
+set instance stasis-lab location
+set predicate (robot-at curator1 entrance)
+set predicate (robot-at drone1 entrance)
+set predicate (slot-of slot-c1a curator1)
+set predicate (slot-of slot-c1b curator1)
+set predicate (slot-free slot-c1a)
+set predicate (slot-free slot-c1b)
+set predicate (slot-of slot-d1a drone1)
+set predicate (slot-free slot-d1a)
+set predicate (can-carry-pod curator1)
+set predicate (can-fly drone1)
+set predicate (at-pod pod1 anti-vibration-pods)
+set predicate (at-pod pod2 anti-vibration-pods)
+set predicate (at-artifact art-beta-1 hall-beta)
+set predicate (at-artifact art-beta-2 hall-beta)
+set predicate (at-artifact art-alpha-1 hall-alpha)
+set predicate (at-artifact art-alpha-2 hall-alpha)
+set predicate (at-artifact core-sample-1 cryo-chamber)
+set predicate (is-fragile art-beta-2)
+set predicate (is-alpha art-alpha-1)
+set predicate (is-alpha art-alpha-2)
+set predicate (is-fragile art-alpha-2)
+set predicate (is-core-sample core-sample-1)
+set predicate (tunnel-connected entrance tunnel)
+set predicate (tunnel-connected tunnel entrance)
+set predicate (tunnel-connected anti-vibration-pods tunnel)
+set predicate (tunnel-connected tunnel anti-vibration-pods)
+set predicate (tunnel-connected hall-alpha tunnel)
+set predicate (tunnel-connected tunnel hall-alpha)
+set predicate (tunnel-connected cryo-chamber tunnel)
+set predicate (tunnel-connected tunnel cryo-chamber)
+set predicate (tunnel-connected stasis-lab tunnel)
+set predicate (tunnel-connected tunnel stasis-lab)
+set predicate (tunnel-beta-connected hall-beta tunnel)
+set predicate (tunnel-beta-connected tunnel hall-beta)
+set predicate (is-hall-beta hall-beta)
+set predicate (unsealed curator1)
+set predicate (unsealed drone1)
+set predicate (not-fragile art-beta-1)
+set predicate (not-fragile art-alpha-1)
+set predicate (not-fragile core-sample-1)
+set predicate (pending-cool art-alpha-1)
+set predicate (pending-cool art-alpha-2)
+set predicate (not-hall-beta entrance)
+set predicate (not-hall-beta tunnel)
+set predicate (not-hall-beta anti-vibration-pods)
+set predicate (not-hall-beta hall-alpha)
+set predicate (not-hall-beta cryo-chamber)
+set predicate (not-hall-beta stasis-lab)
+set predicate (seismic-clear)
+set goal (and (at-artifact art-beta-1 stasis-lab) (stabilized art-beta-2) (at-artifact art-beta-2 stasis-lab) (cooled art-alpha-1) (at-artifact art-alpha-1 cryo-chamber) (stabilized art-alpha-2) (cooled art-alpha-2) (at-artifact art-alpha-2 cryo-chamber) (at-artifact core-sample-1 stasis-lab) )
