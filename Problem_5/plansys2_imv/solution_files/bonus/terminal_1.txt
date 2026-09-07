@@ -1,0 +1,222 @@
+root@ce737e11789f:/computer/Final_project/Autonomous-Preservation-Robots-in-Interplanetary-Museum-Vault-scenario/Problem_5# ros2 launch plansys2_imv plansys2_imv_launch.py
+[INFO] [launch]: All log files can be found below /root/.ros/log/2026-09-07-07-35-22-276485-ce737e11789f-54456
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [plansys2_node-1]: process started with pid [54457]
+[INFO] [move_via_tunnel_node-2]: process started with pid [54459]
+[INFO] [move_via_tunnel_to_beta_node-3]: process started with pid [54461]
+[INFO] [activate_sealing_node-4]: process started with pid [54463]
+[INFO] [deactivate_sealing_node-5]: process started with pid [54465]
+[INFO] [fly_node-6]: process started with pid [54467]
+...
+[plansys2_node-1] [INFO] [1788766522.674497806] [problem_expert]: [problem_expert] Configuring...
+[plansys2_node-1] [INFO] [1788766522.675156842] [problem_expert]: [problem_expert] Configured
+[plansys2_node-1] [INFO] [1788766522.675307094] [problem_expert_lc_mngr]: Transition 1 successfully triggered.
+[plansys2_node-1] [INFO] [1788766522.675528064] [problem_expert_lc_mngr]: Node problem_expert_lc_mngr has current state inactive.
+[plansys2_node-1] [INFO] [1788766522.675677101] [planner]: [planner] Configuring...
+[plansys2_node-1] [INFO] [1788766522.676312220] [planner]: Created solver : POPF of type plansys2/POPFPlanSolver
+[plansys2_node-1] [INFO] [1788766522.676337509] [planner]: [planner] Configured
+[plansys2_node-1] [INFO] [1788766522.676486161] [planner_lc_mngr]: Transition 1 successfully triggered.
+[plansys2_node-1] [INFO] [1788766522.676717525] [planner_lc_mngr]: Node planner_lc_mngr has current state inactive.
+[plansys2_node-1] [INFO] [1788766522.676851859] [executor]: [executor] Configuring...
+[plansys2_node-1] [INFO] [1788766522.743203825] [executor]: [executor] Configured
+[plansys2_node-1] [INFO] [1788766522.743684160] [executor_lc_mngr]: Transition 1 successfully triggered.
+[plansys2_node-1] [INFO] [1788766522.744093889] [executor_lc_mngr]: Node executor_lc_mngr has current state inactive.
+[plansys2_node-1] [INFO] [1788766522.744307875] [domain_expert]: [domain_expert] Activating...
+[plansys2_node-1] [INFO] [1788766522.744328650] [domain_expert]: [domain_expert] Activated
+[plansys2_node-1] [INFO] [1788766522.744437759] [domain_expert_lc_mngr]: Transition 3 successfully triggered.
+[plansys2_node-1] [INFO] [1788766522.744592519] [problem_expert]: [problem_expert] Activating...
+[plansys2_node-1] [INFO] [1788766522.744609591] [problem_expert]: [problem_expert] Activated
+[plansys2_node-1] [INFO] [1788766522.744722810] [problem_expert_lc_mngr]: Transition 3 successfully triggered.
+[plansys2_node-1] [INFO] [1788766522.744884434] [planner]: [planner] Activating...
+[plansys2_node-1] [INFO] [1788766522.744895797] [planner]: [planner] Activated
+[plansys2_node-1] [INFO] [1788766522.744998655] [planner_lc_mngr]: Transition 3 successfully triggered.
+[plansys2_node-1] [INFO] [1788766522.745142428] [executor]: [executor] Activating...
+[plansys2_node-1] [INFO] [1788766522.745154892] [executor]: [executor] Activated
+[plansys2_node-1] [INFO] [1788766522.745262809] [executor_lc_mngr]: Transition 3 successfully triggered.
+[plansys2_node-1] [INFO] [1788766522.745482316] [domain_expert_lc_mngr]: Node domain_expert_lc_mngr has current state active.
+[plansys2_node-1] [INFO] [1788766522.745699340] [problem_expert_lc_mngr]: Node problem_expert_lc_mngr has current state active.
+[plansys2_node-1] [INFO] [1788766522.745913059] [planner_lc_mngr]: Node planner_lc_mngr has current state active.
+[plansys2_node-1] [INFO] [1788766522.746092400] [executor_lc_mngr]: Node executor_lc_mngr has current state active.
+[plansys2_node-1] [INFO] [1788766559.537935975] [problem_expert]: Adding problem:
+[plansys2_node-1] ;; ===================================================================
+[plansys2_node-1] ;; Problem: "The Martian" Hab - Problem 5 bonus
+...
+[plansys2_node-1] Adding instance: soil-sample-1 artifact
+[plansys2_node-1] Adding instance: soil-sample-2 artifact
+[plansys2_node-1] Adding instance: bio-specimen-1 artifact
+[plansys2_node-1] Adding instance: bio-specimen-2 artifact
+[plansys2_node-1] Adding instance: core-sample-1 artifact
+[plansys2_node-1] Adding instance: crate1 pod
+[plansys2_node-1] Adding instance: crate2 pod
+[plansys2_node-1] Adding instance: rover1 robot
+[plansys2_node-1] Adding instance: recon_drone1 robot
+[plansys2_node-1] Adding instance: hab-corridor location
+[plansys2_node-1] Adding instance: airlock location
+[plansys2_node-1] Adding instance: hydroponics-bay location
+[plansys2_node-1] Adding instance: med-bay location
+[plansys2_node-1] Adding instance: sample-locker location
+[plansys2_node-1] Adding instance: workshop location
+[plansys2_node-1] Adding instance: solar-farm location
+[plansys2_node-1] Adding instance: waypoint-1 location
+[plansys2_node-1] Adding instance: waypoint-2 location
+[plansys2_node-1] Adding instance: pathfinder-site location
+[plansys2_node-1] Adding instance: slot-r1a slot
+[plansys2_node-1] Adding instance: slot-r1b slot
+[plansys2_node-1] Adding instance: slot-d1a slot
+[plansys2_node-1] Adding predicate: (robot-at rover1 airlock)
+[plansys2_node-1] Adding predicate: (robot-at recon_drone1 airlock)
+[plansys2_node-1] Adding predicate: (unsealed rover1)
+[plansys2_node-1] Adding predicate: (unsealed recon_drone1)
+[plansys2_node-1] Adding predicate: (slot-of slot-r1a rover1)
+[plansys2_node-1] Adding predicate: (slot-of slot-r1b rover1)
+[plansys2_node-1] Adding predicate: (slot-free slot-r1a)
+[plansys2_node-1] Adding predicate: (slot-free slot-r1b)
+[plansys2_node-1] Adding predicate: (slot-of slot-d1a recon_drone1)
+[plansys2_node-1] Adding predicate: (slot-free slot-d1a)
+[plansys2_node-1] Adding predicate: (can-carry-pod rover1)
+[plansys2_node-1] Adding predicate: (can-fly recon_drone1)
+[plansys2_node-1] Adding predicate: (at-pod crate1 workshop)
+[plansys2_node-1] Adding predicate: (at-pod crate2 workshop)
+[plansys2_node-1] Adding predicate: (at-artifact soil-sample-1 solar-farm)
+[plansys2_node-1] Adding predicate: (at-artifact soil-sample-2 pathfinder-site)
+[plansys2_node-1] Adding predicate: (at-artifact bio-specimen-1 hydroponics-bay)
+[plansys2_node-1] Adding predicate: (at-artifact bio-specimen-2 hydroponics-bay)
+[plansys2_node-1] Adding predicate: (at-artifact core-sample-1 med-bay)
+[plansys2_node-1] Adding predicate: (is-fragile soil-sample-2)
+[plansys2_node-1] Adding predicate: (is-alpha bio-specimen-1)
+[plansys2_node-1] Adding predicate: (is-alpha bio-specimen-2)
+[plansys2_node-1] Adding predicate: (is-fragile bio-specimen-2)
+[plansys2_node-1] Adding predicate: (is-core-sample core-sample-1)
+[plansys2_node-1] Adding predicate: (not-fragile soil-sample-1)
+[plansys2_node-1] Adding predicate: (not-fragile bio-specimen-1)
+[plansys2_node-1] Adding predicate: (not-fragile core-sample-1)
+[plansys2_node-1] Adding predicate: (pending-cool bio-specimen-1)
+[plansys2_node-1] Adding predicate: (pending-cool bio-specimen-2)
+[plansys2_node-1] Adding predicate: (tunnel-connected hab-corridor airlock)
+[plansys2_node-1] Adding predicate: (tunnel-connected airlock hab-corridor)
+[plansys2_node-1] Adding predicate: (tunnel-connected hab-corridor hydroponics-bay)
+[plansys2_node-1] Adding predicate: (tunnel-connected hydroponics-bay hab-corridor)
+[plansys2_node-1] Adding predicate: (tunnel-connected hab-corridor med-bay)
+[plansys2_node-1] Adding predicate: (tunnel-connected med-bay hab-corridor)
+[plansys2_node-1] Adding predicate: (tunnel-connected hab-corridor sample-locker)
+[plansys2_node-1] Adding predicate: (tunnel-connected sample-locker hab-corridor)
+[plansys2_node-1] Adding predicate: (tunnel-connected hab-corridor workshop)
+[plansys2_node-1] Adding predicate: (tunnel-connected workshop hab-corridor)
+[plansys2_node-1] Adding predicate: (tunnel-connected airlock solar-farm)
+[plansys2_node-1] Adding predicate: (tunnel-connected solar-farm airlock)
+[plansys2_node-1] Adding predicate: (tunnel-connected airlock waypoint-1)
+[plansys2_node-1] Adding predicate: (tunnel-connected waypoint-1 airlock)
+[plansys2_node-1] Adding predicate: (tunnel-connected waypoint-1 waypoint-2)
+[plansys2_node-1] Adding predicate: (tunnel-connected waypoint-2 waypoint-1)
+[plansys2_node-1] Adding predicate: (tunnel-beta-connected waypoint-2 pathfinder-site)
+[plansys2_node-1] Adding predicate: (tunnel-beta-connected pathfinder-site waypoint-2)
+[plansys2_node-1] Adding predicate: (is-hall-beta pathfinder-site)
+[plansys2_node-1] Adding predicate: (not-hall-beta hab-corridor)
+[plansys2_node-1] Adding predicate: (not-hall-beta airlock)
+[plansys2_node-1] Adding predicate: (not-hall-beta hydroponics-bay)
+[plansys2_node-1] Adding predicate: (not-hall-beta med-bay)
+[plansys2_node-1] Adding predicate: (not-hall-beta sample-locker)
+[plansys2_node-1] Adding predicate: (not-hall-beta workshop)
+[plansys2_node-1] Adding predicate: (not-hall-beta solar-farm)
+[plansys2_node-1] Adding predicate: (not-hall-beta waypoint-1)
+[plansys2_node-1] Adding predicate: (not-hall-beta waypoint-2)
+[plansys2_node-1] Adding predicate: (seismic-clear)
+[plansys2_node-1] Adding goal node: (at-artifact soil-sample-1 sample-locker)
+[plansys2_node-1] Adding goal node: (stabilized soil-sample-2)
+[plansys2_node-1] Adding goal node: (at-artifact soil-sample-2 sample-locker)
+[plansys2_node-1] Adding goal node: (cooled bio-specimen-1)
+[plansys2_node-1] Adding goal node: (at-artifact bio-specimen-1 med-bay)
+[plansys2_node-1] Adding goal node: (stabilized bio-specimen-2)
+[plansys2_node-1] Adding goal node: (cooled bio-specimen-2)
+[plansys2_node-1] Adding goal node: (at-artifact bio-specimen-2 med-bay)
+[plansys2_node-1] Adding goal node: (at-artifact core-sample-1 sample-locker)
+[plansys2_node-1] Adding Goal: (and (at-artifact soil-sample-1 sample-locker)(stabilized soil-sample-2)(at-artifact soil-sample-2 sample-locker)(cooled bio-specimen-1)(at-artifact bio-specimen-1 med-bay)(stabilized bio-specimen-2)(cooled bio-specimen-2)(at-artifact bio-specimen-2 med-bay)(at-artifact core-sample-1 sample-locker))
+[plansys2_node-1] [INFO] [1788766568.753345117] [executor]: Action activate_sealing timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788766568.757316264] [executor]: Action fly timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788766568.761682805] [executor]: Action move_via_tunnel timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788766568.765226868] [executor]: Action pickup_artifact timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788766568.768722811] [executor]: Action cool timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788766568.772216126] [executor]: Action pickup_artifact timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788766568.775779113] [executor]: Action move_via_tunnel timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788766568.779228196] [executor]: Action putdown_artifact timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788766568.782330096] [executor]: Action fly timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788766568.785487061] [executor]: Action move_via_tunnel timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788766568.788545389] [executor]: Action pickup_artifact timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788766568.791823231] [executor]: Action fly timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788766568.795098468] [executor]: Action move_via_tunnel timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788766568.798305020] [executor]: Action putdown_artifact timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788766568.801785046] [executor]: Action fly timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788766568.805246872] [executor]: Action putdown_artifact timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788766568.808938300] [executor]: Action pickup_artifact timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788766568.812740824] [executor]: Action move_via_tunnel timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788766568.816396684] [executor]: Action fly timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788766568.820152302] [executor]: Action putdown_artifact timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788766568.823993004] [executor]: Action move_via_tunnel timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788766568.828214702] [executor]: Action pickup_pod timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788766568.832832717] [executor]: Action move_via_tunnel timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788766568.836905637] [executor]: Action move_via_tunnel timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788766568.840995410] [executor]: Action secure_in_pod timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788766568.845305533] [executor]: Action cool_in_pod timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788766568.849775095] [executor]: Action move_via_tunnel timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788766568.854515226] [executor]: Action move_via_tunnel timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788766568.859341165] [executor]: Action unload_from_pod timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788766568.864599282] [executor]: Action move_via_tunnel timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788766568.870270186] [executor]: Action move_via_tunnel timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788766568.875645533] [executor]: Action move_via_tunnel timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788766568.880544678] [executor]: Action move_via_tunnel timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788766568.886264904] [executor]: Action move_via_tunnel_to_beta timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788766568.891604739] [executor]: Action secure_in_pod timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788766568.897533103] [executor]: Action move_via_tunnel_to_beta timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788766568.902873606] [executor]: Action move_via_tunnel timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788766568.908477006] [executor]: Action move_via_tunnel timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788766568.914957154] [executor]: Action move_via_tunnel timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788766568.920997362] [executor]: Action move_via_tunnel timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1788766568.927320679] [executor]: Action unload_from_pod timeout percentage -1.000000
+[plansys2_node-1] [WARN] [1788766568.962222263] [rcl.logging_rosout]: Publisher already registered for provided node name. If this is due to multiple nodes with the same name then all logs for that logger name will go out over the existing publisher. As soon as any node with that name is destructed it will unregister the publisher, preventing any further logs for that name from being published on the rosout topic.
+[plansys2_node-1] [WARN] [1788766568.990256423] [rcl.logging_rosout]: Publisher already registered for provided node name. If this is due to multiple nodes with the same name then all logs for that logger name will go out over the existing publisher. As soon as any node with that name is destructed it will unregister the publisher, preventing any further logs for that name from being published on the rosout topic.
+activate_sealing ... [100%]  
+fly ... [100%]  
+[plansys2_node-1] [WARN] [1788766572.401820037] [LifecyclePublisher]: Trying to publish message on the topic '/actions_hub', but the publisher is not activated
+pickup_artifact ... [100%]  
+move_via_tunnel ... [100%]  
+pickup_artifact ... [100%]  
+cool ... [100%]  
+putdown_artifact ... [100%]  
+[plansys2_node-1] [WARN] [1788766578.504028449] [LifecyclePublisher]: Trying to publish message on the topic '/actions_hub', but the publisher is not activated
+move_via_tunnel ... [100%]  
+[plansys2_node-1] [WARN] [1788766579.499809858] [LifecyclePublisher]: Trying to publish message on the topic '/actions_hub', but the publisher is not activated
+fly ... [100%]  
+pickup_artifact ... [100%]  
+move_via_tunnel ... [100%]  
+[plansys2_node-1] [WARN] [1788766583.001107628] [LifecyclePublisher]: Trying to publish message on the topic '/actions_hub', but the publisher is not activated
+fly ... [100%]  
+putdown_artifact ... [100%]  
+move_via_tunnel ... [100%]  
+putdown_artifact ... [100%]  
+fly ... [100%]  
+pickup_artifact ... [100%]  
+move_via_tunnel ... [100%]  
+fly ... [100%]  
+putdown_artifact ... [100%]  
+move_via_tunnel ... [100%]  
+pickup_pod ... [100%]  
+move_via_tunnel ... [100%]  
+move_via_tunnel ... [100%]  
+secure_in_pod ... [100%]  
+cool_in_pod ... [100%]  
+move_via_tunnel ... [100%]  
+move_via_tunnel ... [100%]  
+unload_from_pod ... [100%]  
+move_via_tunnel ... [100%]  
+move_via_tunnel ... [100%]  
+move_via_tunnel ... [100%]  
+move_via_tunnel ... [100%]  
+move_via_tunnel_to_beta ... [100%]  
+secure_in_pod ... [100%]  
+move_via_tunnel_to_beta ... [100%]  
+move_via_tunnel ... [100%]  
+move_via_tunnel ... [100%]  
+move_via_tunnel ... [100%]  
+move_via_tunnel ... [100%]  
+unload_from_pod ... [100%]  
+[plansys2_node-1] [INFO] [1788766658.695582301] [executor]: Plan Succeeded

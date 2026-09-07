@@ -152,3 +152,11 @@ pkill -9 -f _node
 ros2 daemon stop
 ros2 daemon start
 ```
+
+## Problem 5 - bonus
+Deploys Problem 5 "The Martian" inspired variant.
+
+Run the same commands as above. CHange only the problem file called in Terminal 2:
+```bash
+ros2 run plansys2_terminal plansys2_terminal --ros-args -p problem_file:=$(pwd)/pddl/problem_bonus.pddl
+```

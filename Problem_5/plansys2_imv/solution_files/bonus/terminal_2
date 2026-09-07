@@ -1,0 +1,82 @@
+root@ce737e11789f:/computer/Final_project/Autonomous-Preservation-Robots-in-Interplanetary-Museum-Vault-scenario/Problem_5/pl
+ansys2_imv# ros2 run plansys2_terminal plansys2_terminal --ros-args -p problem_file:=$(pwd)/pddl/problem_bonus.pddl
+[INFO] [1788766559.536604800] [terminal]: Adding problem file to problem_expert: /computer/Final_project/Autonomous-Preservation-Robots-in-Interplanetary-Museum-Vault-scenario/Problem_5/plansys2_imv/pddl/problem_bonus.pddl
+ROS2 Planning System console. Type "quit" to finish
+> get plan
+plan: 
+0:      (activate_sealing rover1)       [1]
+0:      (fly recon_drone1 airlock hydroponics-bay)      [2]
+1.001:  (move_via_tunnel rover1 airlock solar-farm)     [3]
+2.001:  (pickup_artifact recon_drone1 bio-specimen-1 hydroponics-bay slot-d1a)  [1]
+3.002:  (cool recon_drone1 bio-specimen-1 slot-d1a hydroponics-bay)     [3]
+4.002:  (pickup_artifact rover1 soil-sample-1 solar-farm slot-r1a)      [1]
+5.002:  (move_via_tunnel rover1 solar-farm airlock)     [3]
+6.002:  (putdown_artifact recon_drone1 bio-specimen-1 hydroponics-bay slot-d1a) [1]
+7.002:  (fly recon_drone1 hydroponics-bay med-bay)      [2]
+8.003:  (move_via_tunnel rover1 airlock hab-corridor)   [3]
+9.002:  (pickup_artifact recon_drone1 core-sample-1 med-bay slot-d1a)   [1]
+10.002: (fly recon_drone1 med-bay sample-locker)        [2]
+11.004: (move_via_tunnel rover1 hab-corridor sample-locker)     [3]
+12.002: (putdown_artifact recon_drone1 core-sample-1 sample-locker slot-d1a)    [1]
+13.002: (fly recon_drone1 sample-locker hydroponics-bay)        [2]
+14.004: (putdown_artifact rover1 soil-sample-1 sample-locker slot-r1a)  [1]
+15.002: (pickup_artifact recon_drone1 bio-specimen-1 hydroponics-bay slot-d1a)  [1]
+15.004: (move_via_tunnel rover1 sample-locker hab-corridor)     [3]
+16.002: (fly recon_drone1 hydroponics-bay med-bay)      [2]
+18.002: (putdown_artifact recon_drone1 bio-specimen-1 med-bay slot-d1a) [1]
+18.005: (move_via_tunnel rover1 hab-corridor workshop)  [3]
+21.005: (pickup_pod rover1 crate1 workshop slot-r1a)    [1]
+22.005: (move_via_tunnel rover1 workshop hab-corridor)  [3]
+25.006: (move_via_tunnel rover1 hab-corridor hydroponics-bay)   [3]
+28.006: (secure_in_pod rover1 bio-specimen-2 crate1 hydroponics-bay slot-r1a)   [2]
+30.006: (cool_in_pod rover1 bio-specimen-2 crate1 slot-r1a hydroponics-bay)     [3]
+33.006: (move_via_tunnel rover1 hydroponics-bay hab-corridor)   [3]
+36.007: (move_via_tunnel rover1 hab-corridor med-bay)   [3]
+39.007: (unload_from_pod rover1 bio-specimen-2 crate1 med-bay slot-r1a) [2]
+41.007: (move_via_tunnel rover1 med-bay hab-corridor)   [3]
+44.008: (move_via_tunnel rover1 hab-corridor airlock)   [3]
+47.009: (move_via_tunnel rover1 airlock waypoint-1)     [3]
+50.01:  (move_via_tunnel rover1 waypoint-1 waypoint-2)  [3]
+53.011: (move_via_tunnel_to_beta rover1 waypoint-2 pathfinder-site)     [3]
+56.011: (secure_in_pod rover1 soil-sample-2 crate1 pathfinder-site slot-r1a)    [2]
+58.011: (move_via_tunnel_to_beta rover1 pathfinder-site waypoint-2)     [3]
+61.012: (move_via_tunnel rover1 waypoint-2 waypoint-1)  [3]
+64.013: (move_via_tunnel rover1 waypoint-1 airlock)     [3]
+67.014: (move_via_tunnel rover1 airlock hab-corridor)   [3]
+70.015: (move_via_tunnel rover1 hab-corridor sample-locker)     [3]
+73.015: (unload_from_pod rover1 soil-sample-2 crate1 sample-locker slot-r1a)    [2]
+> run
+[(move_via_tunnel rover1 airlock solar-farm) 46.6667%][(pickup_artifact recon_drone1 bio-specimen-1 hydroponics-bay slot-d1a)
+[(move_via_tunnel rover1 airlock solar-farm) 53.3333%][(pickup_artifact recon_drone1 bio-specimen-1 hydroponics-bay slot-d1a)
+[(move_via_tunnel rover1 airlock solar-farm) 66.6667%][(pickup_artifact recon_drone1 bio-specimen-1 hydroponics-bay slot-d1a)
+[(move_via_tunnel rover1 airlock solar-farm) 73.3333%][(pickup_artifact recon_drone1 bio-specimen-1 hydroponics-bay slot-d1a)
+[(cool recon_drone1 bio-specimen-1 slot-d1a hydroponics-bay) 33.3333%][(pickup_artifact rover1 soil-sample-1 solar-farm slot-
+[(cool recon_drone1 bio-specimen-1 slot-d1a hydroponics-bay) 40%][(pickup_artifact rover1 soil-sample-1 solar-farm slot-r1a) 
+[(cool recon_drone1 bio-specimen-1 slot-d1a hydroponics-bay) 46.6667%][(pickup_artifact rover1 soil-sample-1 solar-farm slot-
+[(cool recon_drone1 bio-specimen-1 slot-d1a hydroponics-bay) 53.3333%][(pickup_artifact rover1 soil-sample-1 solar-farm slot-
+[(cool recon_drone1 bio-specimen-1 slot-d1a hydroponics-bay) 60%][(pickup_artifact rover1 soil-sample-1 solar-farm slot-r1a) 
+[(cool recon_drone1 bio-specimen-1 slot-d1a hydroponics-bay) 66.6667%][(pickup_artifact rover1 soil-sample-1 solar-farm slot-
+[(move_via_tunnel rover1 solar-farm airlock) 46.6667%][(putdown_artifact recon_drone1 bio-specimen-1 hydroponics-bay slot-d1a
+[(move_via_tunnel rover1 solar-farm airlock) 53.3333%][(putdown_artifact recon_drone1 bio-specimen-1 hydroponics-bay slot-d1a
+[(move_via_tunnel rover1 solar-farm airlock) 60%][(putdown_artifact recon_drone1 bio-specimen-1 hydroponics-bay slot-d1a) 60%
+[(move_via_tunnel rover1 solar-farm airlock) 66.6667%][(putdown_artifact recon_drone1 bio-specimen-1 hydroponics-bay slot-d1a
+[(move_via_tunnel rover1 solar-farm airlock) 73.3333%][(putdown_artifact recon_drone1 bio-specimen-1 hydroponics-bay slot-d1a
+[(move_via_tunnel rover1 hab-corridor sample-locker) 60%][(putdown_artifact recon_drone1 core-sample-1 sample-locker slot-d1a
+[(move_via_tunnel rover1 hab-corridor sample-locker) 66.6667%][(putdown_artifact recon_drone1 core-sample-1 sample-locker slo
+[(move_via_tunnel rover1 hab-corridor sample-locker) 73.3333%][(putdown_artifact recon_drone1 core-sample-1 sample-locker slo
+[(move_via_tunnel rover1 hab-corridor sample-locker) 80%][(putdown_artifact recon_drone1 core-sample-1 sample-locker slot-d1a
+[(move_via_tunnel rover1 hab-corridor sample-locker) 86.6667%][(putdown_artifact recon_drone1 core-sample-1 sample-locker slo
+[(move_via_tunnel rover1 hab-corridor sample-locker) 93.3333%][(putdown_artifact recon_drone1 core-sample-1 sample-locker slo
+[(move_via_tunnel rover1 sample-locker hab-corridor) 26.6667%][(pickup_artifact recon_drone1 bio-specimen-1 hydroponics-bay s
+[(move_via_tunnel rover1 sample-locker hab-corridor) 33.3333%][(pickup_artifact recon_drone1 bio-specimen-1 hydroponics-bay s
+[(move_via_tunnel rover1 sample-locker hab-corridor) 40%][(pickup_artifact recon_drone1 bio-specimen-1 hydroponics-bay slot-d
+[(move_via_tunnel rover1 sample-locker hab-corridor) 46.6667%][(pickup_artifact recon_drone1 bio-specimen-1 hydroponics-bay s
+[(move_via_tunnel rover1 sample-locker hab-corridor) 53.3333%][(pickup_artifact recon_drone1 bio-specimen-1 hydroponics-bay s
+[(move_via_tunnel rover1 sample-locker hab-corridor) 60%][(pickup_artifact recon_drone1 bio-specimen-1 hydroponics-bay slot-d
+[(move_via_tunnel rover1 hab-corridor workshop) 46.6667%][(putdown_artifact recon_drone1 bio-specimen-1 med-bay slot-d1a) 20%
+[(move_via_tunnel rover1 hab-corridor workshop) 53.3333%][(putdown_artifact recon_drone1 bio-specimen-1 med-bay slot-d1a) 40%
+[(move_via_tunnel rover1 hab-corridor workshop) 66.6667%][(putdown_artifact recon_drone1 bio-specimen-1 med-bay slot-d1a) 80%
+[(move_via_tunnel rover1 hab-corridor workshop) 73.3333%][(putdown_artifact recon_drone1 bio-specimen-1 med-bay slot-d1a) 100
+[INFO] [1788766660.937916479] [executor_client]: Plan Succeeded
+
+Successful finished 
