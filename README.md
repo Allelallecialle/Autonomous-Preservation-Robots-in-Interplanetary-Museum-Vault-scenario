@@ -86,8 +86,8 @@ planutils run popf domain.pddl problem.pddl
 planutils run tfd domain.pddl problem.pddl
  
 # Seismic (TFD not applicable)
-planutils run optic domain_seismic.pddl problem_seismic.pddl
-planutils run popf domain_seismic.pddl problem_seismic.pddl
+planutils run optic domain.pddl problem.pddl
+planutils run popf domain.pddl problem.pddl
 ```
  
 Gantt charts can be generated from the OPTIC plan output with [pddl-gantt](https://github.com/jan-dolejsi/pddl-gantt).
