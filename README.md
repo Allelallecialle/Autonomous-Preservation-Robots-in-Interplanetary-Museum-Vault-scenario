@@ -15,13 +15,16 @@ the modelling choices and results per problem.
  
 ```
 .
-├── Problem_1/                  Classical planning (LAMA-first, FF, FD A*/LM-cut)
-├── Problem_2/                  Multi-agent + capacity; same planners as Problem 1
-├── Problem_3/                  HTN (Panda)
-├── Problem_4/                  Durative actions (OPTIC, POPF, TFD) + seismic variant
+├── Problem_1/                  Classical planning
+├── Problem_2/                  Multi-agent + capacity
+├── Problem_3/                  HTN
+├── Problem_4/                  Durative actions
+│  └── seismic_windows/
+│  └── non_seismic/         
 ├── Problem_5/
 │   └── plansys2_imv/           ROS2/PlanSys2 package
 ├── Automated_planning_report.pdf
+├── Assignment.pdf
 └── README.md
 ```
 
