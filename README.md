@@ -36,7 +36,6 @@ cd Problem_1
 
 planutils run lama-first domain.pddl problem.pddl
 planutils run ff domain.pddl problem.pddl
-
 planutils run fast-downward -- domain.pddl problem.pddl --search "astar(lmcut())"
 ```
 
@@ -65,7 +64,7 @@ Same primitive actions as Problem 2. Solved with Panda, the only HTN planner in
  
 ```bash
 cd Problem_3
-planutils run panda domain.pddl problem.pddl
+planutils run panda domain.hddl problem.hddl
 ```
  
 VAL doesn't accept HTN problems directly. The plan's validity has to be
