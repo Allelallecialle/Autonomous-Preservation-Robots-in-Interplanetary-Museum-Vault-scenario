@@ -2,6 +2,19 @@
 ; Domain: Interplanetary Museum Vault (IMV) - Problem 1
 ;
 ; Single robotic curator, classical STRIPS-style planning
+;
+; Modeling choices:
+; - artifact and pod share a common supertype `item` so `at`/`carrying`
+;   need only one predicate family each.
+; - Fragile/alpha are independent boolean predicates on `artifact`, 
+;   so traits combine freely.
+; - Pods are physical objects the curator must retrieve, this is what 
+;   makes the pod retrieval trip a planning decision, and keeps pods
+;   interchangeable with other carried items when capacity is
+;   introduced in Problem 2.
+; - Pod capacity is unbounded
+; - seismic-active and tunnel/tunnel-to-beta action split model
+;   the seismic events (even if always false here).
 ; ==========================================================================
 
 (define (domain imv-transport)

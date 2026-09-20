@@ -11,6 +11,13 @@
 ;;   (not (cooled ?a))        -> (pending-cool ?a)     
 ;;   (not (is-hall-beta ?l))  -> (not-hall-beta ?l)    
 ;;   (not (seismic-active))   -> (seismic-clear)
+;;
+;; Modeling choices:
+;; - Manipulation/movement mutual exclusion uses (over all (robot-at ?r
+;;   ?l)) to expresses the physical constraint to be at the location for the whole
+;;   artifact manipulation
+;; - Seismic activity uses :timed-initial-literals, scheduled in :init
+;;   and independent of any action, since it is an event the robots don't cause.
 ;; ==========================================================================
 
 (define (domain imv-transport-temporal-non-seismic)

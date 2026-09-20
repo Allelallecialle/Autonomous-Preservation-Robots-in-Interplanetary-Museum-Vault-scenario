@@ -4,8 +4,16 @@
 ;; Extension of Problem 1:
 ;;  - multiple agent with different capabilities (robotic curator + drone)
 ;;  - maximum carrying capacity per agent, modelled as a fixed number of
-;;     slot objects per robot (kept in plain STRIPS, no numeric
-;;     fluents so the domain stays solvable by the same planners as Problem 1)
+;;     slot objects per robot
+;;
+;; Modeling choices:
+;; - Capacity uses named slot objects (slot-of/slot-free/holding), 
+;;   so the domain stays within plain STRIPS and solvable by the
+;;   same classical planners as Problem 1.
+;; - can-fly / can-carry-pod are independent booleans on a single robot
+;;   type rather than curator/drone subtypes, so action schemas are
+;;   generic and a future robot with combined capabilities would need no new
+;;   type or duplicated actions.
 ;; ==========================================================================
 
 (define (domain imv-transport-multi)

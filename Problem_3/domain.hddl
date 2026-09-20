@@ -2,6 +2,17 @@
 ;; Domain: Interplanetary Museum Vault (IMV) - Problem 3
 ;;
 ;; HTN
+;;
+;; Modeling choices:
+;; - m-mission's five t-handle-artifact subtasks are totally ordered
+;;   (task0 < ... < task5) as a "job list" of the mission.
+;; - The four artifact trait combinations (alpha x fragile) are enumerated
+;;   as four separate t-handle-artifact methods.
+;; - t-goto recurses one hop/flight at a time exploiting the map's radius-1
+;;   star topology (ground recursion always terminates within 2 steps) and
+;;   staying topology agnostic if the map is extended.
+;; - Seismic gating (not (seismic-active)) is checked at t-goto
+;;   beta-crossing methods and at the primitive actions they decompose to.
 ;; ==========================================================================
 
 (define (domain imv-transport-htn)
