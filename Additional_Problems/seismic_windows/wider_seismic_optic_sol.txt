@@ -1,0 +1,72 @@
+root@faeb39914efb:/computer/Final_project/Autonomous-Preservation-Robots-in-Interplanetary-Museum-Vault-scenario/
+Additional_Problems# planutils run optic ../Problem_4/seismic_windows/domain.pddl problem_wider_seismic.pddl
+Number of literals: 95
+Constructing lookup tables: [10%] [20%] [30%] [40%] [50%] [60%] [70%] [80%] [90%] [100%]
+Post filtering unreachable actions:  [10%] [20%] [30%] [40%] [50%] [60%] [70%] [80%] [90%] [100%]
+No semaphore facts found, returning
+Seeing if metric is defined in terms of task vars or a minimal value of makespan
+- Yes it is
+Recognised a monotonic-change-induced limit on -1.000*<special>
+- Must be >=  the metric
+For limits: literal goal index 0, fact (at art-beta-1 stasis-lab), is static or a precondition
+Looking for achievers for goal index 1, fact (stabilized art-beta-2) with fID 77
+ (secure-in-pod curator1 art-beta-2 pod1 anti-vibration-pods slot-c1a) (secure-in-pod curator1 art-beta-2 pod2 anti-vibration-pods slot-c1a) (secure-in-pod curator1 art-beta-2 pod1 cryo-chamber slot-c1a)
+ ...
+
+ For limits: literal goal index 7, fact (at art-alpha-2 cryo-chamber), is static or a precondition
+For limits: literal goal index 8, fact (at core-sample-1 stasis-lab), is static or a precondition
+Action 372 - (cool curator1 art-alpha-1 slot-c1a) is uninteresting once we have fact (cooled art-alpha-1)
+Action 373 - (cool curator1 art-alpha-1 slot-c1b) is uninteresting once we have fact (cooled art-alpha-1)
+Action 374 - (cool drone1 art-alpha-1 slot-d1a) is uninteresting once we have fact (cooled art-alpha-1)
+Action 375 - (cool-in-pod curator1 art-alpha-2 pod1 slot-c1a) is uninteresting once we have fact (cooled art-alpha-2)
+Action 376 - (cool-in-pod curator1 art-alpha-2 pod2 slot-c1a) is uninteresting once we have fact (cooled art-alpha-2)
+Action 377 - (cool-in-pod curator1 art-alpha-2 pod1 slot-c1b) is uninteresting once we have fact (cooled art-alpha-2)
+Action 378 - (cool-in-pod curator1 art-alpha-2 pod2 slot-c1b) is uninteresting once we have fact (cooled art-alpha-2)
+[i] Not abstracting out TIL (seismic-clear)
+All the ground actions in this problem are compression-safe
+Initial heuristic = 24.000, admissible cost estimate 13.006
+b (23.000 | 2.000)b (22.000 | 2.000)b (21.000 | 4.001)b (19.000 | 5.000)b (18.000 | 6.000)b (16.000 | 8.000)b (15.000 | 11.001)b (14.000 | 11.003)b (13.000 | 12.001)b (12.000 | 13.001)b (11.000 | 14.001)b (10.000 | 16.001)b (9.000 | 17.002)b (8.000 | 17.002)b (7.000 | 19.003)b (6.000 | 19.003)b (5.000 | 24.005)b (4.000 | 27.005)
+Resorting to best-first search
+Running WA* with W = 5.000, not restarting with goal states
+b (23.000 | 2.000)b (23.000 | 1.000)b (22.000 | 2.000)b (21.000 | 4.001)b (20.000 | 5.000)b (19.000 | 6.000)b (18.000 | 7.002)b (17.000 | 7.002)b (16.000 | 8.000)b (15.000 | 11.001)b (14.000 | 12.001)b (13.000 | 13.001)b (12.000 | 15.001)b (11.000 | 15.001)b (10.000 | 19.003)b (9.000 | 19.003)b (8.000 | 24.005)b (7.000 | 27.005)b (6.000 | 31.000)b (5.000 | 33.000)b (4.000 | 34.000)b (3.000 | 34.000)b (2.000 | 36.000)b (1.000 | 39.001)(G)
+; LP calculated the cost
+
+; Plan found with metric 41.001
+; Theoretical reachable cost 41.003
+; States evaluated so far: 3103
+; States pruned based on pre-heuristic cost lower bound: 0
+; Time 3.71
+0.000: (fly drone1 entrance cryo-chamber)  [2.000]
+0.000: (activate-sealing curator1)  [1.000]
+1.001: (move-via-tunnel curator1 entrance tunnel)  [3.000]
+2.001: (pickup-artifact drone1 core-sample-1 cryo-chamber slot-d1a)  [1.000]
+3.001: (fly drone1 cryo-chamber stasis-lab)  [2.000]
+4.002: (move-via-tunnel curator1 tunnel anti-vibration-pods)  [3.000]
+5.001: (putdown-artifact drone1 core-sample-1 stasis-lab slot-d1a)  [1.000]
+6.001: (fly drone1 stasis-lab hall-alpha)  [2.000]
+7.003: (pickup-pod curator1 pod1 anti-vibration-pods slot-c1a)  [1.000]
+8.001: (pickup-artifact drone1 art-alpha-1 hall-alpha slot-d1a)  [1.000]
+8.003: (move-via-tunnel curator1 anti-vibration-pods tunnel)  [3.000]
+9.001: (fly drone1 hall-alpha cryo-chamber)  [2.000]
+9.001: (cool drone1 art-alpha-1 slot-d1a)  [3.000]
+11.004: (move-via-tunnel curator1 tunnel hall-alpha)  [3.000]
+12.001: (putdown-artifact drone1 art-alpha-1 cryo-chamber slot-d1a)  [1.000]
+13.001: (fly drone1 cryo-chamber anti-vibration-pods)  [2.000]
+14.004: (secure-in-pod curator1 art-alpha-2 pod1 hall-alpha slot-c1a)  [2.000]
+15.002: (fly drone1 anti-vibration-pods stasis-lab)  [2.000]
+16.004: (move-via-tunnel curator1 hall-alpha tunnel)  [3.000]
+19.005: (cool-in-pod curator1 art-alpha-2 pod1 slot-c1a)  [3.000]
+19.005: (move-via-tunnel curator1 tunnel cryo-chamber)  [3.000]
+22.005: (unload-from-pod curator1 art-alpha-2 pod1 cryo-chamber slot-c1a)  [2.000]
+24.999: (move-via-tunnel curator1 cryo-chamber tunnel)  [3.000]
+28.000: (fly-to-beta drone1 stasis-lab hall-beta)  [2.000]
+28.000: (move-via-tunnel-to-beta curator1 tunnel hall-beta)  [3.000]
+30.000: (pickup-artifact drone1 art-beta-1 hall-beta slot-d1a)  [1.000]
+31.000: (fly-from-beta drone1 hall-beta stasis-lab)  [2.000]
+31.000: (secure-in-pod curator1 art-beta-2 pod1 hall-beta slot-c1a)  [2.000]
+33.000: (putdown-artifact drone1 art-beta-1 stasis-lab slot-d1a)  [1.000]
+33.000: (move-via-tunnel-to-beta curator1 hall-beta tunnel)  [3.000]
+36.001: (move-via-tunnel curator1 tunnel stasis-lab)  [3.000]
+39.001: (unload-from-pod curator1 art-beta-2 pod1 stasis-lab slot-c1a)  [2.000]
+
+ * All goal deadlines now no later than 41.001

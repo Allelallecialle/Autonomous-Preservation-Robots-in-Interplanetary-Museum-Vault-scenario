@@ -15,16 +15,14 @@ the modelling choices and results per problem.
  
 ```
 .
-├── Problem_1/                  Classical planning
-├── Problem_2/                  Multi-agent + capacity
-├── Problem_3/                  HTN
-├── Problem_4/                  Durative actions
-│  └── seismic_windows/
-│  └── non_seismic/         
+├── Problem_1/                  Classical planning (LAMA-first, FF, FD A*/LM-cut)
+├── Problem_2/                  Multi-agent + capacity; same planners as Problem 1
+├── Problem_3/                  HTN (Panda)
+├── Problem_4/                  Durative actions (OPTIC, POPF, TFD) + seismic variant
 ├── Problem_5/
 │   └── plansys2_imv/           ROS2/PlanSys2 package
+├── Additional_Problems/        Additional tests to run with previous domains
 ├── Automated_planning_report.pdf
-├── Assignment.pdf
 └── README.md
 ```
 
@@ -57,7 +55,7 @@ Problem 1:
 cd Problem_2
 planutils run lama-first domain.pddl problem.pddl
 planutils run ff domain.pddl problem.pddl
-planutils run fast-downward -- domain.pddl problem.pddl --search "astar(lmcut())"
+planutils run downward -- domain.pddl problem.pddl --search "astar(lmcut())"
 ```
 
 ## Problem 3 — HTN Planning
@@ -161,4 +159,24 @@ Deploys Problem 5 "The Martian" inspired variant.
 Run the same commands as above. CHange only the problem file called in Terminal 2:
 ```bash
 ros2 run plansys2_terminal plansys2_terminal --ros-args -p problem_file:=$(pwd)/pddl/problem_bonus.pddl
+```
+
+## Additional Problems
+Additional tests for the domains. The results are described in the Update report's section.
+
+### Problem Scaleup
+```bash
+planutils run lama-first ../../Problem_2/domain.pddl problem_scaleup.pddl
+planutils run ff ../../Problem_2/domain.pddl problem_scaleup.pddl
+planutils run downward -- --overall-time-limit 5m --overall-memory-limit 4096M ../../Problem_2/domain.pddl problem_scaleup.pddl --search "astar(lmcut())"
+```
+To validate:
+```bash
+planutils run val -- Validate ../../Problem_2/domain.pddl problem_scaleup.pddl <plan_file>
+```
+
+### Seismic Window
+```bash
+planutils run optic ../../Problem_4/seismic_windows/domain.pddl problem_wider_seismic.pddl
+planutils run popf ../../Problem_4/seismic_windows/domain.pddl problem_wider_seismic.pddl
 ```
