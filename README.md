@@ -175,6 +175,17 @@ To validate:
 planutils run val -- Validate ../../Problem_2/domain.pddl problem_scaleup.pddl <plan_file>
 ```
 
+### Pod Capacity
+```bash
+planutils run lama-first domain_pod_capacity.pddl problem_scaleup_pod_capacity.pddl
+planutils run ff domain_pod_capacity.pddl problem_scaleup_pod_capacity.pddl
+planutils run downward -- --overall-time-limit 5m --overall-memory-limit 4096M domain_pod_capacity.pddl problem_scaleup_pod_capacity.pddl --search "astar(lmcut())"
+```
+To validate:
+```bash
+planutils run val -- Validate domain_pod_capacity.pddl problem_scaleup_pod_capacity.pddl <plan_file>
+```
+
 ### Seismic Window
 ```bash
 planutils run optic ../../Problem_4/seismic_windows/domain.pddl problem_wider_seismic.pddl
