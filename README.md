@@ -10,6 +10,8 @@ five subproblems, each in its own folder, following the indications in `Assignme
 See `Automated_planning_report.pdf` for in detail description of
 the modelling choices and results per problem.
 
+![alt text](https://github.com/Allelallecialle/Autonomous-Preservation-Robots-in-Interplanetary-Museum-Vault-scenario/blob/main/map.png?raw=true)
+
 
 ## Repository structure
  
